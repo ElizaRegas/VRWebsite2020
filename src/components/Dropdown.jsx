@@ -12,7 +12,9 @@ const Dropdown = ({ setIsDropdownOpen }) => {
       >
         <a
           className="dropdown-item"
-          href="#speaking"
+          href="https://www.papercall.io/speakers/valarieregas"
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={() => setIsDropdownOpen(false)}
         >
           Speaking

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
@@ -7,6 +7,8 @@ import AOS from "aos";
 import "./App.css";
 
 function App() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   useEffect(() => {
     AOS.init({
       easing: "ease-out-back",
@@ -18,11 +20,28 @@ function App() {
   }, []);
 
   return (
-    <Switch>
-      <Route path="/portfolio" component={Portfolio} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/" component={Home} />
-    </Switch>
+    <main>
+      <Switch>
+        <Route
+          path="/portfolio"
+          component={Portfolio}
+          isDropdownOpen={isDropdownOpen}
+          setIsDropdownOpen={setIsDropdownOpen}
+        />
+        <Route
+          path="/contact"
+          component={Contact}
+          isDropdownOpen={isDropdownOpen}
+          setIsDropdownOpen={setIsDropdownOpen}
+        />
+        <Route
+          path="/"
+          component={Home}
+          isDropdownOpen={isDropdownOpen}
+          setIsDropdownOpen={setIsDropdownOpen}
+        />
+      </Switch>
+    </main>
   );
 }
 

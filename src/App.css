@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: transparent;
   font-family: source code pro !important;
 }
 
@@ -165,6 +165,10 @@ ul.row {
   margin-top: 5%;
 }
 
+.header {
+  background: transparent;
+}
+
 .icons {
   float: right;
 }
@@ -219,6 +223,10 @@ ul.row {
   color: white;
   position: absolute;
   top: 0;
+}
+
+.mediaDiv {
+  cursor: pointer;
 }
 
 .navbar {

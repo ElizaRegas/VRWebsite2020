@@ -1,9 +1,11 @@
-import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import "../App.css";
 
-const Header = ({ isDropdownOpen, setIsDropdownOpen }) => {
+const Header = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   return (
     <Router>
       <header className="landing">
@@ -16,12 +18,12 @@ const Header = ({ isDropdownOpen, setIsDropdownOpen }) => {
           <div id="nav-container" data-aos="fade-down">
             <ul className="flex floatRight navbar">
               <li className="nav-item">
-                <a className="nav-link" href="index.html">
+                <a className="nav-link" href="/">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#about">
+                <a className="nav-link" href="/#about">
                   About
                 </a>
               </li>
@@ -31,9 +33,8 @@ const Header = ({ isDropdownOpen, setIsDropdownOpen }) => {
                 </a>
               </li>
               <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  href="#"
+                <div
+                  className="nav-link dropdown-toggle mediaDiv" 
                   id="navbarDropdown"
                   role="button"
                   data-toggle="dropdown"
@@ -42,7 +43,7 @@ const Header = ({ isDropdownOpen, setIsDropdownOpen }) => {
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 >
                   Media
-                </Link>
+                </div>
                 {isDropdownOpen && (
                   <Dropdown
                     isDropdownOpen={isDropdownOpen}

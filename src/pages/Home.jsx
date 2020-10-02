@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../components/Header";
 import About from "../components/About";
 import Talks from "../components/Talks";
@@ -6,16 +6,11 @@ import Footer from "../components/Footer";
 import "../App.css";
 
 const Home = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
   return (
     <div>
       <section>
         <div className="landingBg">
-          <Header
-            isDropdownOpen={isDropdownOpen}
-            setIsDropdownOpen={setIsDropdownOpen}
-          />
+          <Header />
           <div class="landing landingCenterText" data-aos="fade-right">
             DevOps Engineer.
             <br />
