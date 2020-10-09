@@ -19,7 +19,7 @@ form .submit:hover {
 }
 
 html {
-  background-color: #b8132f;
+  background-color: #9f0721;
 }
 
 ul {
@@ -55,7 +55,7 @@ ul.row {
 
 .buttonStyle {
   color: white;
-  background: #b8132f;
+  background: #9f0712;
   border-radius: 100px !important;
   font-size: 1vw !important;
 }
@@ -102,7 +102,7 @@ ul.row {
 }
 
 .dropdown-item:hover {
-  color: #b8132f !important;
+  color: #9f0712 !important;
   background-color: transparent !important;
 }
 
@@ -139,7 +139,7 @@ ul.row {
 }
 
 .footer {
-  background-color: #b8132f;
+  background-color: #9f0712;
   color: white;
 }
 
@@ -250,7 +250,7 @@ ul.row {
 }
 
 .nav-link:hover {
-  color: #b8132f;
+  color: #9f0712;
 }
 
 .row2 {
@@ -315,6 +315,7 @@ ul.row {
 #speaking {
   background: black;
   padding-top: 2vw;
+  padding-bottom: 5vw;
 }
 
 /* #talk1 {
