@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import Form from "../components/Form/Form";
+import Emailjs from "../components/Emailjs";
 import "../App.css";
 
 const Contact = () => {
@@ -8,7 +8,7 @@ const Contact = () => {
     <div>
       <div className="contactBg">
         <Header />
-        <Form />
+        <Emailjs />
       </div>
     </div>
   );
