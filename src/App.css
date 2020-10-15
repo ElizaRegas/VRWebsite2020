@@ -77,10 +77,24 @@ ul.row {
 }
 
 .contact-form {
-  width: 50%;
+  width: 35%;
   float: right;
   position: relative;
-  top: -8vw;
+  top: 8vw;
+  color: white;
+  font-size: 1.3vw;
+}
+
+.contact-input {
+  width: 22vw;
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+}
+
+.contact-input:focus {
+  outline: double white;
+  border-bottom: none;
 }
 
 .contact-title {
@@ -287,6 +301,10 @@ ul.row {
   top: 5vh;
   left: 7%;
   padding: 3% 13%;
+}
+
+#contactButton {
+  margin-top: 1vw;
 }
 
 #contactForm {

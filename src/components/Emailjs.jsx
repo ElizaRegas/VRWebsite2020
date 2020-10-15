@@ -22,14 +22,20 @@ export default function ContactUs() {
 
   return (
     <form className="contact-form" onSubmit={sendEmail}>
-      <input type="hidden" name="contact_number" />
+      <input className="contact-input" type="hidden" name="contact_number" />
       <label>Name</label>
-      <input type="text" name="user_name" />
+      <br />
+      <input className="contact-input" type="text" name="user_name" />
+      <br />
       <label>Email</label>
-      <input type="email" name="user_email" />
+      <br />
+      <input className="contact-input" type="email" name="user_email" />
+      <br />
       <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
+      <br />
+      <textarea className="contact-input" name="message" />
+      <br />
+      <input id="contactButton" class="btn buttonStyle" type="submit" value="Send" />
     </form>
   );
 }
