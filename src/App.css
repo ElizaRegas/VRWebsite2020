@@ -201,7 +201,7 @@ ul.row {
 }
 
 .landingAbout {
-  padding: 5% 10%;
+  padding: 5% 10% 3% 10%;
 }
 
 .landingBg {
@@ -281,6 +281,18 @@ ul.row {
   height: fit-content;
   width: 15%;
   margin: 0% 5%;
+}
+
+.upArrow {
+  width: 4%;
+  height: auto;
+  float: right;
+}
+
+.upArrowAbout {
+  position: relative;
+  top: -3vw;
+  left: 5vw;
 }
 
 .weRiseImg {
