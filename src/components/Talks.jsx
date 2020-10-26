@@ -29,7 +29,7 @@ const Talks = () => {
 
         <div class="gallery">
           <ul class="row">
-            <li id="youTube1" className="talkLinks" data-aos="zoom-in">
+            <li className="talkLinks" data-aos="zoom-in">
               <iframe
                 className="iframe imgFill"
                 src="https://www.youtube.com/embed/WHheVF9d4Z8"
@@ -37,7 +37,6 @@ const Talks = () => {
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen=""
                 title="The Mom Advantage"
-                id="talk1"
               ></iframe>
               <p class="whiteText">
                 "The Mom Advantage: Why Tech Needs Mommies"
@@ -59,7 +58,7 @@ const Talks = () => {
                 itemprop="url"
               >
                 <img
-                  class="imgFill"
+                  class="iframe imgFill"
                   src="https://valarieregas.com/wp-content/uploads/2019/01/devopsdasatl-1024x566.jpg"
                   alt="Devops Days Atlanta - April 2018 - Valarie Regas"
                   itemprop="image"
@@ -90,6 +89,7 @@ const Talks = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 itemprop="url"
+                class="iframe imgFill"
               >
                 <div class="listenImg"></div>
               </a>
