@@ -343,27 +343,20 @@ ul.row {
   width: 50%;
 }
 
+#portfolio {
+  background-color: black;
+  height: 100vw;
+}
+
 #speaking {
   background: black;
   padding-top: 2vw;
   padding-bottom: 5vw;
 }
 
-/* #talk1 {
-  padding: 5%;
-} */
-
 #talksHeading {
   color: white;
   padding-top: 1%;
   width: 70%;
 }
-
-/* #youTube1 {
-  background-image: url(./images/YouTube1.png);
-  z-index: 20;
-  padding: 0%;
-  margin: 5%;
-  background-size: cover;
-} */
 
