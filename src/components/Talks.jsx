@@ -1,4 +1,5 @@
 import React from "react";
+import upArrowWhite from "../images/upArrowWhite.png"
 import "../App.css";
 
 const Talks = () => {
@@ -123,6 +124,14 @@ const Talks = () => {
               </p>
             </li>
           </ul>
+          <a href="/">
+            <img
+              className="upArrow upArrowAbout"
+              src={upArrowWhite}
+              alt="back to the top"
+              data-aos="zoom-in"
+            />
+          </a>
         </div>
       </div>
     </section>

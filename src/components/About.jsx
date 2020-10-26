@@ -45,7 +45,7 @@ const About = () => {
               className="upArrow upArrowAbout"
               src={upArrow}
               alt="back to the top"
-              data-aos="fade-left"
+              data-aos="zoom-in"
             />
           </a>
         </div>
