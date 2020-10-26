@@ -25,11 +25,11 @@ export default function ContactUs() {
       <input className="contact-input" type="hidden" name="contact_number" />
       <label>Name</label>
       <br />
-      <input className="contact-input" type="text" name="user_name" />
+      <input className="contact-input" type="text" name="name" />
       <br />
       <label>Email</label>
       <br />
-      <input className="contact-input" type="email" name="user_email" />
+      <input className="contact-input" type="email" name="email" />
       <br />
       <label>Message</label>
       <br />
