@@ -8,6 +8,16 @@ const Portfolio = () => {
     <div>
       <div id="portfolio">
         <Header />
+        {/* <div className="container">
+          <div className="row">
+            <div className="portCard">Portfolio One</div>
+            <div className="portCard">Portfolio One</div>
+            <div className="portCard">Portfolio One</div>
+            <div className="portCard">Portfolio One</div>
+            <div className="portCard">Portfolio One</div>
+            <div className="portCard">Portfolio One</div>
+          </div>
+        </div> */}
       </div>
       <Footer />
     </div>

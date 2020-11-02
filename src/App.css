@@ -227,7 +227,7 @@ ul.row {
 }
 
 .logo {
-  width: 50%;
+  width: 40%;
 }
 
 .logo h1 a {
@@ -265,6 +265,15 @@ ul.row {
 
 .nav-link:hover {
   color: #9f0712;
+}
+
+.portCard {
+  background: white;
+  width: 23%;
+  height: 30vw;
+  border-radius: 10px;
+  margin: 2% 1%;
+  padding: 1%;
 }
 
 .row2 {
@@ -340,7 +349,7 @@ ul.row {
 }
 
 #nav-container {
-  width: 50%;
+  width: 60%;
 }
 
 #portfolio {
