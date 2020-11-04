@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import "../App.css";
 
@@ -8,16 +9,7 @@ const Portfolio = () => {
     <div>
       <div id="portfolio">
         <Header />
-        {/* <div className="container">
-          <div className="row">
-            <div className="portCard">Portfolio One</div>
-            <div className="portCard">Portfolio One</div>
-            <div className="portCard">Portfolio One</div>
-            <div className="portCard">Portfolio One</div>
-            <div className="portCard">Portfolio One</div>
-            <div className="portCard">Portfolio One</div>
-          </div>
-        </div> */}
+        <Carousel />
       </div>
       <Footer />
     </div>
