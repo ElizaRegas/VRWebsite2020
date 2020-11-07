@@ -2,21 +2,23 @@ import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import buddha from "../images/buddha.jpg";
+import clean from "../images/clean2-icon-1.png";
+import "../App.css";
 
 class PortfolioItems extends Component {
     render() {
         return (
             <Carousel>
-                <div>
-                    <img src={buddha} alt="buddha pic"/>
+                <div className="portfolioPic">
+                    <img src={clean} alt="clean titans application"/>
                     <p className="legend">Legend 1</p>
                 </div>
-                <div>
-                    <img src="../images/buddha.jpg" alt="buddha pic"/>
+                <div className="portfolioPic">
+                    <img src={buddha} alt="buddha pic"/>
                     <p className="legend">Legend 2</p>
                 </div>
-                <div>
-                    <img src="../images/buddha.jpg" alt="buddha pic"/>
+                <div className="portfolioPic">
+                    <img src={buddha} alt="buddha pic"/>
                     <p className="legend">Legend 3</p>
                 </div>
             </Carousel>

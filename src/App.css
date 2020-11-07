@@ -276,6 +276,11 @@ ul.row {
   padding: 1%;
 }
 
+.portfolioPic {
+  width: 50%;
+  margin: auto;
+}
+
 .row2 {
   margin: 5vw 0vw 0vw 0vw;
 }
