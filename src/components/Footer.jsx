@@ -7,14 +7,14 @@ import "../App.css";
 const Footer = () => {
   return (
     <footer>
-      <div class="landing footer">
-        <div class="flex">
-          <div class="copyrightText footerMargin">
+      <div className="landing footer">
+        <div className="flex">
+          <div className="copyrightText footerMargin">
             <p>© 2020 Valarie Regas</p>
           </div>
-          <div class="icons">
-            <ul class="flex">
-              <li class="faIcons">
+          <div className="icons">
+            <ul className="flex">
+              <li className="faIcons">
                 <a
                   href="https://github.com/valarier"
                   target="_blank"
@@ -28,7 +28,7 @@ const Footer = () => {
                   ></img>
                 </a>
               </li>
-              <li class="faIcons">
+              <li className="faIcons">
                 <a
                   href="https://www.papercall.io/speakers/valarieregas"
                   target="_blank"
@@ -42,7 +42,7 @@ const Footer = () => {
                   ></img>
                 </a>
               </li>
-              <li class="faIcons">
+              <li className="faIcons">
                 <a
                   href="https://twitter.com/ValarieRegas"
                   target="_blank"
