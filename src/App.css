@@ -64,6 +64,14 @@ ul.row {
   color: slategray;
 }
 
+.carousel .slide {
+  min-width: 102% !important;
+}
+
+.carousel-root {
+  margin-top: 2vw;
+}
+
 .clear {
   clear: both;
 }
@@ -103,8 +111,9 @@ ul.row {
   transition: all 4% ease-in-out;
 }
 
-.contact-title h1 {
-
+.container {
+  display: flex;
+  justify-content: center;
 }
 
 .copyrightText {
@@ -267,18 +276,24 @@ ul.row {
   color: #9f0712;
 }
 
-.portCard {
+.portfolioCard {
   background: white;
-  width: 23%;
-  height: 30vw;
-  border-radius: 10px;
-  margin: 2% 1%;
-  padding: 1%;
+  width: 85%;
+  height: 28vw;
+  padding: 3%;
+  border-top: solid 17px #272727 !important;
+  border-right: solid 17px #272727 !important;
+  border-bottom: solid 17px #272727 !important;
 }
 
 .portfolioPic {
-  width: 50%;
+  width: 55%;
   margin: auto;
+}
+
+.portfolioTitleText {
+  font-weight: bolder;
+  font-size: 1.4vw;
 }
 
 .row2 {
