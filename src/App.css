@@ -64,8 +64,46 @@ ul.row {
   color: slategray;
 }
 
+.carousel .carousel-status {
+  right: 14vw !important;
+}
+
+.carousel .control-dots {
+  bottom: 1vw;
+  left: 0;
+  margin: auto;
+}
+
+.carousel .control-next.control-arrow {
+  right: 15vw !important;
+}
+
 .carousel .slide {
   min-width: 102% !important;
+}
+
+.carousel .slide .legend {
+  bottom: 26vw !important;
+  left: 65.4vw !important;
+  position: absolute;
+  margin-left: -13% !important;
+  width: 20% !important;
+  background: #272727 !important;
+  color: #fff;
+  padding: 10px;
+  font-size: 1vw;
+  text-align: center;
+  opacity: 0.25;
+  transition: opacity 0.35s ease-in-out;
+  border-radius: 0px !important;
+}
+
+.carousel .slide .legend:hover {
+  background-color: #272727;
+}
+
+.carousel .slider-wrapper {
+  height: 33vw;
 }
 
 .carousel-root {
@@ -231,7 +269,7 @@ ul.row {
 }
 
 .listenImg {
-  background-image: url('./images/ListenToYourMother.png');
+  background-image: url("./images/ListenToYourMother.png");
   height: 100%;
 }
 
@@ -276,22 +314,34 @@ ul.row {
   color: #9f0712;
 }
 
+.portfolioBodyText {
+  font-size: 1vw;
+}
+
 .portfolioCard {
   background: white;
   width: 85%;
   height: 28vw;
   padding: 3%;
-  border-top: solid 17px #272727 !important;
-  border-right: solid 17px #272727 !important;
-  border-bottom: solid 17px #272727 !important;
+  border-top: solid 1.5vw #272727 !important;
+  border-right: solid 1.5vw #272727 !important;
+  border-bottom: solid 1.5vw #272727 !important;
 }
 
 .portfolioPic {
   width: 55%;
   margin: auto;
+  padding-right: 3.5vw;
 }
 
 .portfolioTitleText {
+  color: #9f0712;
+  font-size: 2vw;
+  font-weight: bolder;
+  font-family: Homemade Apple;
+}
+
+.portfolioTypeText {
   font-weight: bolder;
   font-size: 1.4vw;
 }
@@ -388,4 +438,3 @@ ul.row {
   padding-top: 1%;
   width: 70%;
 }
-

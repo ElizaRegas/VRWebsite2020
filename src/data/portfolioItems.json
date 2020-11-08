@@ -1,0 +1,29 @@
+[
+  {
+    "name": "clean",
+    "alt": "clean titans application",
+    "legend": "React, SQL, Node, Express, AuthO",
+    "portfolioTypeText": "Application/Team Project",
+    "portfolioTitleText": "Clean Titans",
+    "href": "https://github.com/melheins/clean-titans-2.0-app",
+    "portfolioBodyText": "Clean Titans 2.0 is the current version of an application designed to teach children to responsibly do their chores. This was completed as my final project while attending the Coding Boot Camp at GA Tech."   
+  },
+  {
+    "name": "buddha",
+    "alt": "clean titans application",
+    "legend": "React, SQL, Node, Express, AuthO",
+    "portfolioTypeText": "Application/Team Project",
+    "portfolioTitleText": "Clean Titans",
+    "href": "https://github.com/melheins/clean-titans-2.0-app",
+    "portfolioBodyText": "Clean Titans 2.0 is the current version of an application designed to teach children to responsibly do their chores. This was completed as my final project while attending the Coding Boot Camp at GA Tech."   
+  },
+  {
+    "name": "clean",
+    "alt": "clean titans application",
+    "legend": "React, SQL, Node, Express, AuthO",
+    "portfolioTypeText": "Application/Team Project",
+    "portfolioTitleText": "Clean Titans",
+    "href": "https://github.com/melheins/clean-titans-2.0-app",
+    "portfolioBodyText": "Clean Titans 2.0 is the current version of an application designed to teach children to responsibly do their chores. This was completed as my final project while attending the Coding Boot Camp at GA Tech."   
+  }
+]
