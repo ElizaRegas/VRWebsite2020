@@ -74,15 +74,19 @@ ul.row {
 }
 
 .carousel.carousel-slider .control-arrow {
-  top: -21vw !important;
+  top: -15vw !important;
   font-size: 26px;
   bottom: 0;
-  margin-top: 7vw !important;
   margin-left: 15vw;
   position: fixed !important;
   padding: -14px !important;
   z-index: 99;
   opacity: 1 !important;
+  color: #fff;
+  font-size: 26px;
+  margin-top: 18vw !important;
+  padding: 5px;
+  height: 50%;
 }
 
 .carousel .carousel-status {
