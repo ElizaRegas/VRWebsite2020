@@ -376,10 +376,15 @@ ul.row {
 
 .portfolioCard {
   background: white;
-  width: 50%;
+  width: 100%;
   height: 100%;
   padding: 3%;
   border-left: solid 1.5vw #272727 !important;
+  color: black;
+}
+
+.portfolioCard:hover {
+  color: gray;
 }
 
 .portfolioPic {
@@ -415,6 +420,10 @@ ul.row {
   height: fit-content;
   width: 15%;
   margin: 0% 5%;
+}
+
+.techText {
+  color: #9f0712;
 }
 
 .upArrow {
@@ -479,6 +488,10 @@ ul.row {
 #portfolio {
   background-color: black;
   height: 60vw;
+}
+
+#portfolioLinks a:hover {
+  text-decoration: none;
 }
 
 #speaking {
