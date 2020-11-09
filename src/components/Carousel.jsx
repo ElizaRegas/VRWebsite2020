@@ -2,11 +2,11 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import buddha from "../images/buddha.jpg";
-import clean from "../images/clean2-icon-1.png";
+import clean from "../images/clean2-icon-1.jpg";
 import stem from "../images/shes-in-stem.jpg";
 import foodie from "../images/foodie-finder.jpg";
 import fridge from "../images/openfridge-slide.jpg";
-import train from "../images/train-track-1600x900.jpg";
+import train from "../images/train-track.jpg";
 import gift from "../images/giphy.jpg";
 import nasty from "../images/nasty-trivia.jpg";
 import hangman from "../images/hangman.jpg";

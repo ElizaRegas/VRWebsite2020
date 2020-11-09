@@ -64,13 +64,40 @@ ul.row {
   color: slategray;
 }
 
+.carousel {
+  width: 56% !important;
+  margin: auto;
+}
+
+.carousel.carousel-slider {
+  margin: auto !important;
+}
+
+.carousel.carousel-slider .control-arrow {
+  top: -5vw !important;
+  font-size: 26px;
+  bottom: 0;
+  margin-top: 7vw !important;
+  margin-left: 15vw;
+  position: fixed !important;
+  padding: -14px !important;
+  z-index: 99;
+  opacity: 1 !important;
+}
+
 .carousel .carousel-status {
-  right: 14vw !important;
+  position: absolute;
+  top: -.2vw !important;
+  right: 3vw !important;
+  padding: 5px;
+  font-size: 10px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+  color: #fff;
 }
 
 .carousel .control-dots {
   bottom: 1vw;
-  left: 0;
+  left: .75vw;
   margin: auto;
 }
 
@@ -78,8 +105,8 @@ ul.row {
   right: 15vw !important;
 }
 
-.carousel .slide {
-  min-width: 102% !important;
+.carousel .slide img {
+  width: 50% !important;
 }
 
 .carousel .slide .legend {
@@ -104,6 +131,15 @@ ul.row {
 
 .carousel .slider-wrapper {
   height: 33vw;
+}
+
+.carousel .thumbs {
+  padding: 0;
+}
+
+.carousel .thumbs-wrapper {
+  margin: 1.3vw;
+  overflow: hidden;
 }
 
 .carousel-root {
@@ -152,6 +188,7 @@ ul.row {
 .container {
   display: flex;
   justify-content: center;
+  padding: 0 !important;
 }
 
 .copyrightText {
@@ -320,18 +357,16 @@ ul.row {
 
 .portfolioCard {
   background: white;
-  width: 85%;
-  height: 28vw;
+  width: 50%;
+  height: 100%;
   padding: 3%;
-  border-top: solid 1.5vw #272727 !important;
-  border-right: solid 1.5vw #272727 !important;
-  border-bottom: solid 1.5vw #272727 !important;
+  border-left: solid 1.5vw #272727 !important;
 }
 
 .portfolioPic {
-  width: 55%;
-  margin: auto;
-  padding-right: 3.5vw;
+  width: 56vw;
+  height: 28vw;
+  border: solid 1.5vw #272727;
 }
 
 .portfolioTitleText {
