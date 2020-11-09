@@ -87,17 +87,17 @@ ul.row {
 
 .carousel .carousel-status {
   position: absolute;
-  top: -.2vw !important;
+  top: -0.2vw !important;
   right: 3vw !important;
   padding: 5px;
   font-size: 10px;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
   color: #fff;
 }
 
 .carousel .control-dots {
   bottom: 1vw;
-  left: .75vw;
+  left: 0.75vw;
   margin: auto;
 }
 
@@ -138,12 +138,12 @@ ul.row {
 }
 
 .carousel .thumbs-wrapper {
-  margin: 1.3vw;
+  margin-top: 2vw !important;
   overflow: hidden;
 }
 
 .carousel-root {
-  margin-top: 2vw;
+  margin-top: 3vw;
 }
 
 .clear {
@@ -205,6 +205,21 @@ ul.row {
 }
 
 .dropdown-menu {
+  position: absolute;
+  top: 85% !important;
+  left: 0;
+  z-index: 1000 !important;
+  float: left;
+  min-width: 10rem;
+  font-size: 1rem;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 0.25rem;
   border: none !important;
   display: inline-block !important;
 }
@@ -459,7 +474,7 @@ ul.row {
 
 #portfolio {
   background-color: black;
-  height: 100vw;
+  height: 60vw;
 }
 
 #speaking {
