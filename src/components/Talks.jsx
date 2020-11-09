@@ -8,7 +8,7 @@ const Talks = () => {
       <div class="landing" id="speaking">
         <div class="flex">
           <a
-            href="contact.html"
+            href="/contact"
             class="btn buttonStyle talksButtons"
             id="talksBook"
           >
