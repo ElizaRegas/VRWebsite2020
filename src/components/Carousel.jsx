@@ -15,7 +15,7 @@ import "../App.css";
 const PortfolioItems = () => {
   return (
     <Carousel>
-      <div className="container portfolioPic">
+      <div className="container portfolioPic" data-aos="fade-left">
         <img src={clean} alt="clean titans application" className="imageSize" />
         <div className="portfolioCard">
           <p className="portfolioTypeText">Application/Team Project</p>
