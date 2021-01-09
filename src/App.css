@@ -196,7 +196,9 @@ ul.row {
 }
 
 .copyrightText {
-  width: 75%;
+  width: 80%;
+  float: left;
+  margin-top: 1.5%;
 }
 
 .dropdown-item {
@@ -243,8 +245,7 @@ ul.row {
 }
 
 .faIcons {
-  padding-top: 1rem;
-  padding-left: 100%;
+  padding: 1rem;
 }
 
 .flex {
@@ -287,7 +288,7 @@ ul.row {
 }
 
 .icons {
-  float: right;
+  width: 20%;
 }
 
 .iframe {
@@ -505,3 +506,5 @@ ul.row {
   padding-top: 1%;
   width: 70%;
 }
+
+media@ 
