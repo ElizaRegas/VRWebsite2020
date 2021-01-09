@@ -482,6 +482,10 @@ ul.row {
   background-color: transparent;
 }
 
+#hamburger-nav {
+  display: none;
+}
+
 #nav-container {
   width: 60%;
 }
@@ -507,4 +511,11 @@ ul.row {
   width: 70%;
 }
 
-media@ 
+@media (max-width: 850px) {
+  #nav-container {
+    display: none;
+  }
+  #hamburger-nav {
+    display: block;
+  }
+}

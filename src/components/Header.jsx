@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import "../App.css";
+import HamburgerNav from "./HamburgerNav";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -14,6 +15,9 @@ const Header = () => {
             <h1>
               <a href="index.html">Valarie Regas</a>
             </h1>
+          </div>
+          <div id="hamburger-nav">
+            <HamburgerNav />
           </div>
           <div id="nav-container" data-aos="fade-down">
             <ul className="flex floatRight navbar">
@@ -34,7 +38,7 @@ const Header = () => {
               </li>
               <li className="nav-item dropdown">
                 <div
-                  className="nav-link dropdown-toggle mediaDiv" 
+                  className="nav-link dropdown-toggle mediaDiv"
                   id="navbarDropdown"
                   role="button"
                   data-toggle="dropdown"
@@ -52,7 +56,7 @@ const Header = () => {
                 )}
               </li>
               <li className="nav-item">
-                <a className="nav-link" href='/contact'>
+                <a className="nav-link" href="/contact">
                   Contact
                 </a>
               </li>
