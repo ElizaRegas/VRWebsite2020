@@ -2,21 +2,33 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "../App.css";
 
-const HamburgerNav = () => {
+const HamburgerNav = ({ sidebarIsOpen, setSidebarIsOpen }) => {
+  const changeSidebarState = () => {
+    setSidebarIsOpen(true);
+    console.log(sidebarIsOpen, "changed");
+  }
   return (
-    <div>
-      <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">
-          Home
-        </a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        {/* <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a> */}
+    <Router>
+      <div
+        id="mySidebar"
+        className="sidebar"
+        style={{ right: sidebarIsOpen ? 0 : -250 }}
+      >
+        <div class="hamburgerNav" id="myTopnav" onclick={changeSidebarState}>
+          {!sidebarIsOpen && <i className="fa fa-2x fa-bars"></i>}
+          {sidebarIsOpen && (
+            <div>
+              <a href="#home" class="active">
+                Home
+              </a>
+              <a href="#news">News</a>
+              <a href="#contact">Contact</a>
+              <a href="#about">About</a>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </Router>
   );
 };
 

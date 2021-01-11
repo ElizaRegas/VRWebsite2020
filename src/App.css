@@ -244,6 +244,11 @@ ul.row {
   font-size: 1.5vw;
 }
 
+.fa-bars {
+  color: white;
+
+}
+
 .faIcons {
   padding: 1rem;
 }
@@ -281,6 +286,10 @@ ul.row {
 
 .gallery {
   margin-top: 5%;
+}
+
+.hamburgerNav {
+  
 }
 
 .header {

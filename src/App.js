@@ -8,6 +8,7 @@ import "./App.css";
 
 function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -27,18 +28,24 @@ function App() {
           component={Portfolio}
           isDropdownOpen={isDropdownOpen}
           setIsDropdownOpen={setIsDropdownOpen}
+          sidebarIsOpen={sidebarIsOpen}
+          setSidebarIsOpen={setSidebarIsOpen}
         />
         <Route
           path="/contact"
           component={Contact}
           isDropdownOpen={isDropdownOpen}
           setIsDropdownOpen={setIsDropdownOpen}
+          sidebarIsOpen={sidebarIsOpen}
+          setSidebarIsOpen={setSidebarIsOpen}
         />
         <Route
           path="/"
           component={Home}
           isDropdownOpen={isDropdownOpen}
           setIsDropdownOpen={setIsDropdownOpen}
+          sidebarIsOpen={sidebarIsOpen}
+          setSidebarIsOpen={setSidebarIsOpen}
         />
       </Switch>
     </main>
