@@ -154,6 +154,17 @@ ul.row {
   clear: both;
 }
 
+.closeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #dce5d8;
+  font-size: 3rem;
+  position: relative;
+  top: -4rem;
+  right: -13rem;
+}
+
 .contactBg {
   background-image: url(./images/valContact.jpg);
   background-size: cover;
@@ -246,7 +257,9 @@ ul.row {
 
 .fa-bars {
   color: white;
-
+  position: relative;
+  top: 2rem;
+  right: -1rem;
 }
 
 .faIcons {
@@ -289,7 +302,7 @@ ul.row {
 }
 
 .hamburgerNav {
-  
+
 }
 
 .header {
@@ -419,6 +432,19 @@ ul.row {
   margin: 5vw 0vw 0vw 0vw;
 }
 
+.sidebar {
+  height: 100%;
+  width: 30%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 70%;
+  background-color: #9f0712;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
 .talkLinks {
   width: 50%;
   height: 22vw;
@@ -521,6 +547,9 @@ ul.row {
 }
 
 @media (max-width: 850px) {
+  .logo h1 a {
+    top: 2rem;
+  }
   #nav-container {
     display: none;
   }

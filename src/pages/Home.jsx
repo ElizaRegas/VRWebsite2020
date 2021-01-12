@@ -5,7 +5,7 @@ import Talks from "../components/Talks";
 import Footer from "../components/Footer";
 import "../App.css";
 
-const Home = () => {
+const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
   return (
     <div>
       <section>
