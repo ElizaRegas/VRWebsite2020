@@ -29,8 +29,6 @@ const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
           </div>
         </div>
       </section>
-      <About />
-      <Talks />
       <Footer />
     </div>
   );

@@ -7,10 +7,10 @@ import "../App.css";
 const Footer = () => {
   return (
     <footer>
-      <div className="landing footer">
+      <div className="footer">
         <div className="flex">
           <div className="copyrightText">
-            <p>© 2020 Valarie Regas</p>
+            <p className="copyrightTextFontSize">© 2020 Valarie Regas</p>
           </div>
           <ul className="icons flex">
             <li className="faIcons">

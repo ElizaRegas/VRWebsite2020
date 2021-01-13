@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../components/Header";
 import aboutImg from "../images/aboutAlt.jpg";
 import upArrow from "../images/upArrow.png";
 import "../App.css";
@@ -6,6 +7,7 @@ import "../App.css";
 const About = () => {
   return (
     <section>
+      <Header />
       <div class="aboutSection" id="about">
         <div class="landingAbout">
           <div class="flex">
@@ -40,14 +42,14 @@ const About = () => {
               </p>
             </div>
           </div>
-          <a href="/">
+          {/* <a href="/">
             <img
               className="upArrow upArrowAbout"
               src={upArrow}
               alt="back to the top"
               data-aos="zoom-in"
             />
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

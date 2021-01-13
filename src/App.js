@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import About from "./components/About";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import AOS from "aos";
@@ -23,6 +24,14 @@ function App() {
   return (
     <main>
       <Switch>
+        <Route
+          path="/about"
+          component={About}
+          isDropdownOpen={isDropdownOpen}
+          setIsDropdownOpen={setIsDropdownOpen}
+          sidebarIsOpen={sidebarIsOpen}
+          setSidebarIsOpen={setSidebarIsOpen}
+        />
         <Route
           path="/portfolio"
           component={Portfolio}

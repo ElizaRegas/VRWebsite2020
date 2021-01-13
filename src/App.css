@@ -1,3 +1,7 @@
+a:hover {
+  text-decoration: none;
+}
+
 body {
   background-color: transparent;
   font-family: source code pro !important;
@@ -173,6 +177,16 @@ ul.row {
   max-width: 100vw;
 }
 
+.contactDropdownOpen {
+  color: white;
+  position: relative;
+  top: 5rem;
+}
+
+.contactDropdownOpen:hover {
+  color: gray;
+}
+
 .contact-form {
   width: 35%;
   float: right;
@@ -209,16 +223,12 @@ ul.row {
 .copyrightText {
   width: 80%;
   float: left;
-  margin-top: 1.5%;
+  padding: 1% 10%;
+  vertical-align: middle;
 }
 
-.dropdown-item {
-  color: white !important;
-}
-
-.dropdown-item:hover {
-  color: #9f0712 !important;
-  background-color: transparent !important;
+.copyrightTextFontSize {
+  font-size: 1.5rem;
 }
 
 .dropdown-menu {
@@ -229,12 +239,11 @@ ul.row {
   float: left;
   min-width: 10rem;
   font-size: 1rem;
-  color: #212529;
+  color:rgba(0, 0, 0, 0.9);
   margin: 0;
   padding: 0;
   text-align: left;
   list-style: none;
-  background-color: #fff;
   background-clip: padding-box;
   border-radius: 0.25rem;
   border: none !important;
@@ -258,12 +267,14 @@ ul.row {
 .fa-bars {
   color: white;
   position: relative;
-  top: 2rem;
+  top: 1rem;
   right: -1rem;
+  cursor: pointer;
 }
 
 .faIcons {
-  padding: 1rem;
+  padding: 0rem 1rem;
+  vertical-align: center;
 }
 
 .flex {
@@ -277,6 +288,7 @@ ul.row {
 .footer {
   background-color: #9f0712;
   color: white;
+  height: 100px;
 }
 
 .footerMargin {
@@ -301,16 +313,13 @@ ul.row {
   margin-top: 5%;
 }
 
-.hamburgerNav {
-
-}
-
 .header {
   background: transparent;
 }
 
 .icons {
   width: 20%;
+  padding: 1% 10% 1% 0%;
 }
 
 .iframe {
@@ -323,7 +332,7 @@ ul.row {
 }
 
 .landing {
-  padding: 1% 10%;
+  padding: 3% 10% 0% 10%;
 }
 
 .landingAbout {
@@ -361,7 +370,7 @@ ul.row {
   text-decoration: none;
   font-size: 3vw;
   color: white;
-  position: absolute;
+  position: relative;
   top: 0;
 }
 
@@ -378,19 +387,40 @@ ul.row {
   padding: 0.5rem 1rem;
 }
 
+.navbar-ss {
+  margin-top: -45%;
+}
+
 .nav-item {
   font-family: source code pro;
   display: grid;
 }
 
+.nav-item-ss {
+  padding-top: 1rem;
+}
+
+.nav-item-ss:hover {
+  text-decoration: none !important;
+}
+
 .nav-link {
   text-decoration: none;
   color: white;
-  font-size: 1.2vw;
+  font-size: 1rem;
 }
 
 .nav-link:hover {
-  color: #9f0712;
+  color: gray;
+}
+
+.nav-link-ss {
+  font-size: 1rem;
+  color: white;
+}
+
+.nav-link-ss:hover {
+  color: gray
 }
 
 .portfolioBodyText {
@@ -513,8 +543,25 @@ ul.row {
   position: relative;
 }
 
+#dropdown-item, #dropdownItemSS {
+  color: white !important;
+}
+
+#dropdown-item:hover {
+  color: #9f0712 !important;
+  background-color: transparent !important;
+  text-decoration: none;
+}
+
+#dropdownItemSS:hover {
+  color: gray !important;
+  background-color: transparent !important;
+  text-decoration: none;
+}
+
 #dropdownStyling {
   background-color: transparent;
+  margin-top: .25rem;
 }
 
 #hamburger-nav {
@@ -546,9 +593,20 @@ ul.row {
   width: 70%;
 }
 
+@media (min-width: 1800px) {
+  .landingCenterText {
+    top: 20%;
+  }
+}
+@media (min-width: 1400px) {
+  .nav-link {
+    font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 850px) {
   .logo h1 a {
-    top: 2rem;
+    top: 2vw;
   }
   #nav-container {
     display: none;
