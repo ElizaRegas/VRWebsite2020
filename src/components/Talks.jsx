@@ -1,12 +1,15 @@
 import React from "react";
-import upArrowWhite from "../images/upArrowWhite.png"
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+// import upArrowWhite from "../images/upArrowWhite.png"
 import "../App.css";
 
 const Talks = () => {
   return (
     <section>
+      <Header />
       <div class="landing" id="speaking">
-        <div class="flex">
+        <div class="flex talksButtonsTopPadding">
           <a
             href="/contact"
             class="btn buttonStyle talksButtons"
@@ -32,6 +35,7 @@ const Talks = () => {
           <ul class="row">
             <li className="talkLinks" data-aos="zoom-in">
               <iframe
+                id="momAdvantage"
                 className="iframe imgFill"
                 src="https://www.youtube.com/embed/WHheVF9d4Z8"
                 frameborder="0"
@@ -124,16 +128,17 @@ const Talks = () => {
               </p>
             </li>
           </ul>
-          <a href="/">
+          {/* <a href="/">
             <img
               className="upArrow upArrowAbout"
               src={upArrowWhite}
               alt="back to the top"
               data-aos="zoom-in"
             />
-          </a>
+          </a> */}
         </div>
       </div>
+      <Footer />
     </section>
   );
 };

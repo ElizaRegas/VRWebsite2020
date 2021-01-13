@@ -223,7 +223,7 @@ ul.row {
 .copyrightText {
   width: 80%;
   float: left;
-  padding: 1% 10%;
+  padding: 2% 10% 0%;
   vertical-align: middle;
 }
 
@@ -288,7 +288,7 @@ ul.row {
 .footer {
   background-color: #9f0712;
   color: white;
-  height: 100px;
+  height: 0px;
 }
 
 .footerMargin {
@@ -319,7 +319,7 @@ ul.row {
 
 .icons {
   width: 20%;
-  padding: 1% 10% 1% 0%;
+  padding: 2% 10% 1% 0%;
 }
 
 .iframe {
@@ -332,7 +332,7 @@ ul.row {
 }
 
 .landing {
-  padding: 3% 10% 0% 10%;
+  padding: 2% 10% 0% 10%;
 }
 
 .landingAbout {
@@ -488,6 +488,10 @@ ul.row {
   margin: 0% 5%;
 }
 
+.talksButtonsTopPadding {
+  padding-top: 1.5rem;
+}
+
 .techText {
   color: #9f0712;
 }
@@ -514,7 +518,7 @@ ul.row {
 }
 
 #about {
-  margin: 2% 0%;
+  margin: 1rem 0rem;
 }
 
 #bookMeButton {
@@ -545,10 +549,11 @@ ul.row {
 
 #dropdown-item, #dropdownItemSS {
   color: white !important;
+  font-size: 1.3rem;
 }
 
 #dropdown-item:hover {
-  color: #9f0712 !important;
+  color: grey !important;
   background-color: transparent !important;
   text-decoration: none;
 }
@@ -562,6 +567,7 @@ ul.row {
 #dropdownStyling {
   background-color: transparent;
   margin-top: .25rem;
+  padding-left: 1rem;
 }
 
 #hamburger-nav {
@@ -585,6 +591,7 @@ ul.row {
   background: black;
   padding-top: 2vw;
   padding-bottom: 5vw;
+  margin-top: 1rem;
 }
 
 #talksHeading {

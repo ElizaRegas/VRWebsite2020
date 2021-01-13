@@ -25,8 +25,7 @@ const Dropdown = ({ setIsDropdownOpen }) => {
         <div>
           <a
             id={`${isSmallScreen ? "dropdownItemSS" : "dropdown-item"}`}
-            href="/#speaking"
-            target="_blank"
+            href="/talks"
             rel="noopener noreferrer"
             onClick={() => setIsDropdownOpen(false)}
           >

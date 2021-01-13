@@ -1,7 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import About from "../components/About";
-import Talks from "../components/Talks";
 import Footer from "../components/Footer";
 import "../App.css";
 

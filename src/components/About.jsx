@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import aboutImg from "../images/aboutAlt.jpg";
-import upArrow from "../images/upArrow.png";
+// import upArrow from "../images/upArrow.png";
 import "../App.css";
 
 const About = () => {
@@ -52,6 +53,7 @@ const About = () => {
           </a> */}
         </div>
       </div>
+      <Footer />
     </section>
   );
 };
