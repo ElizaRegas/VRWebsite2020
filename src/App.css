@@ -57,6 +57,10 @@ ul.row {
   padding-left: 3%;
 }
 
+.blackBackground {
+  background-color: black !important;
+}
+
 .buttonStyle {
   color: white;
   background: #9f0712;
@@ -340,10 +344,11 @@ ul.row {
 }
 
 .landingBg {
-  background-image: url(./images/landing.jpg);
+  background-image: url(/static/media/landing.284075ec.jpg);
   background-size: cover;
-  position: relative;
   min-height: 56vw;
+  max-width: 100vw;
+  background-attachment: fixed;
 }
 
 .landingCenterText {

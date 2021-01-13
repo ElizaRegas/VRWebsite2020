@@ -6,7 +6,7 @@ import "../App.css";
 const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
   return (
     <div>
-      <section>
+      <section className="blackBackground">
         <div className="landingBg">
           <Header />
           <div class="landing landingCenterText" data-aos="fade-right">
