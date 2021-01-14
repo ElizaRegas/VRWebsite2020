@@ -6,7 +6,7 @@ import "../App.css";
 const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
   return (
     <div>
-      <section className="blackBackground">
+      <section>
         <div className="landingBg">
           <Header />
           <div class="landing landingCenterText" data-aos="fade-right">
@@ -27,7 +27,9 @@ const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
           </div>
         </div>
       </section>
-      <Footer />
+        <div>
+          <Footer />
+        </div>
     </div>
   );
 };

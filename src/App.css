@@ -176,7 +176,7 @@ ul.row {
 .contactBg {
   background-image: url(./images/valContact.jpg);
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: initial;
   min-height: 56vw;
   max-width: 100vw;
 }
@@ -232,7 +232,7 @@ ul.row {
 }
 
 .copyrightTextFontSize {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .dropdown-menu {
@@ -243,7 +243,7 @@ ul.row {
   float: left;
   min-width: 10rem;
   font-size: 1rem;
-  color:rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.9);
   margin: 0;
   padding: 0;
   text-align: left;
@@ -292,7 +292,6 @@ ul.row {
 .footer {
   background-color: #9f0712;
   color: white;
-  height: 0px;
 }
 
 .footerMargin {
@@ -345,10 +344,13 @@ ul.row {
 
 .landingBg {
   background-image: url(images/landing.jpg);
-  background-size: cover;
+  background-attachment: initial;
   min-height: 56vw;
   max-width: 100vw;
-  background-attachment: fixed;
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+  background-size: cover;
 }
 
 .landingCenterText {
@@ -425,7 +427,7 @@ ul.row {
 }
 
 .nav-link-ss:hover {
-  color: gray
+  color: gray;
 }
 
 .portfolioBodyText {
@@ -552,9 +554,11 @@ ul.row {
   position: relative;
 }
 
-#dropdown-item, #dropdownItemSS {
-  color: white !important;
-  font-size: 1.3rem;
+#dropdown-item,
+#dropdownItemSS {
+  color: lightgray !important;
+  font-size: 1rem;
+  box-shadow: ;
 }
 
 #dropdown-item:hover {
@@ -571,7 +575,7 @@ ul.row {
 
 #dropdownStyling {
   background-color: transparent;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
   padding-left: 1rem;
 }
 
