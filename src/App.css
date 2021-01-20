@@ -291,12 +291,12 @@ ul.row {
 }
 
 .footer {
-  background-color: #9f0712;
+  background-color: transparent;
   color: white;
   position: fixed;
   left: 0;
   bottom: 0;
-  height: 60px;
+  height: auto;
   width: 100%;
 }
 
@@ -351,7 +351,7 @@ ul.row {
 .landingBg {
   background-image: url(images/landing.jpg);
   background-attachment: initial;
-  min-height: 56vw;
+  min-height: 64vw;
   max-width: 100vw;
   -webkit-background-size: cover; 
   -moz-background-size: cover; 
