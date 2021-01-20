@@ -5,6 +5,7 @@ a:hover {
 body {
   background-color: transparent;
   font-family: source code pro !important;
+
 }
 
 form {
@@ -23,7 +24,7 @@ form .submit:hover {
 }
 
 html {
-  background-color: #9f0721;
+  background-color: black;
 }
 
 ul {
@@ -292,6 +293,11 @@ ul.row {
 .footer {
   background-color: #9f0712;
   color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
 }
 
 .footerMargin {
@@ -609,18 +615,30 @@ ul.row {
   width: 70%;
 }
 
-@media (min-width: 1800px) {
+@media screen and (min-width: 1800px) {
   .landingCenterText {
     top: 20%;
   }
 }
-@media (min-width: 1400px) {
+@media screen and (min-width: 1400px) {
   .nav-link {
     font-size: 1.3rem;
   }
 }
 
-@media (max-width: 850px) {
+@media screen and (max-width: 1068px) {
+  .navbar {
+    padding: 0.5rem 0.25rem;
+  }
+}
+
+/* @media screen and (max-width: 1015px) {
+  .navbar {
+    padding: 0.5rem 0.25rem;
+  }
+} */
+
+@media screen and (max-width: 988px) {
   .logo h1 a {
     top: 2vw;
   }
