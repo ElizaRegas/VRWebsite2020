@@ -1,15 +1,15 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "../App.css";
+import "../App.scss";
 
 const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
   return (
-    <div>
+    <div id="homeBackgroundColor">
       <section>
         <div className="landingBg">
           <Header />
-          <div class="landing landingCenterText" data-aos="fade-right">
+          <div className="landing landingCenterText">
             DevOps Engineer.
             <br />
             Tech Evangelist.
@@ -19,8 +19,8 @@ const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
             Queen of the YAMLs.
             <br />
             Total nerd.
-            <div data-aos="fade-up">
-              <a href="/contact" class="btn buttonStyle" id="bookMeButton">
+            <div className="bookMeFade">
+              <a href="/contact" className="btn buttonStyle" id="bookMeButton">
                 Book Me
               </a>
             </div>

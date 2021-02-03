@@ -2,7 +2,7 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
 
-import '../App.css';
+import '../App.scss';
 
 export default function ContactUs() {
 

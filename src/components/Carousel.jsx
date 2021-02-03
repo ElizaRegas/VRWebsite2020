@@ -10,7 +10,7 @@ import train from "../images/train-track.jpg";
 import gif from "../images/giphy.jpg";
 import nasty from "../images/nasty-trivia.jpg";
 import hangman from "../images/hangman.jpg";
-import "../App.css";
+import "../App.scss";
 
 const PortfolioItems = () => {
   return (

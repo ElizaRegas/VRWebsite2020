@@ -10,7 +10,7 @@
     "axios": "^0.20.0",
     "bootstrap-icons": "^1.0.0",
     "emailjs-com": "^2.6.3",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-responsive-carousel": "^3.2.10",

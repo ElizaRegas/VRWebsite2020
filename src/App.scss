@@ -1,3 +1,96 @@
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  30% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  30% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  30% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  30% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@mixin fade-timing {
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@mixin fadeRight {
+  animation-name: fadeRight;
+  @include fade-timing;
+}
+
+@mixin fadeLeft {
+  animation-name: fadeLeft;
+  @include fade-timing;
+}
+
+@mixin fadeDown {
+  animation-name: fadeDown;
+  @include fade-timing;
+}
+
+@mixin fadeUp {
+  animation-name: fadeUp;
+  @include fade-timing;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -5,7 +98,10 @@ a:hover {
 body {
   background-color: transparent;
   font-family: source code pro !important;
+}
 
+footer {
+  height: 6vw;
 }
 
 form {
@@ -24,7 +120,7 @@ form .submit:hover {
 }
 
 html {
-  background-color: black;
+  background-color: #9f0712;
 }
 
 ul {
@@ -61,6 +157,8 @@ ul.row {
 .blackBackground {
   background-color: black !important;
 }
+
+.bookMeFades
 
 .buttonStyle {
   color: white;
@@ -228,7 +326,6 @@ ul.row {
 .copyrightText {
   width: 80%;
   float: left;
-  padding: 2% 10% 0%;
   vertical-align: middle;
 }
 
@@ -278,7 +375,7 @@ ul.row {
 }
 
 .faIcons {
-  padding: 0rem 1rem;
+  padding-left: 2rem;
   vertical-align: center;
 }
 
@@ -293,15 +390,24 @@ ul.row {
 .footer {
   background-color: transparent;
   color: white;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   height: auto;
   width: 100%;
+  padding: 1% 10%;
 }
 
 .footerMargin {
   padding-top: 1rem;
+}
+
+.footerFlex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
 }
 
 .form-control {
@@ -326,10 +432,9 @@ ul.row {
   background: transparent;
 }
 
-.icons {
+/* .icons {
   width: 20%;
-  padding: 2% 10% 1% 0%;
-}
+} */
 
 .iframe {
   z-index: 99;
@@ -353,9 +458,9 @@ ul.row {
   background-attachment: initial;
   min-height: 64vw;
   max-width: 100vw;
-  -webkit-background-size: cover; 
-  -moz-background-size: cover; 
-  -o-background-size: cover; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -365,8 +470,9 @@ ul.row {
   font-size: 1.5vw;
   position: absolute;
   top: 25%;
-  left: 3%;
+  left: 1%;
   line-height: 250%;
+  @include fadeRight;
 }
 
 .listenImg {
@@ -376,6 +482,8 @@ ul.row {
 
 .logo {
   width: 40%;
+  padding-top: 2%;
+  @include fadeDown;
 }
 
 .logo h1 a {
@@ -488,6 +596,11 @@ ul.row {
   padding-top: 60px;
 }
 
+.socialImg {
+  width: 1.6rem;
+  height: auto;
+}
+
 .talkLinks {
   width: 50%;
   height: 22vw;
@@ -564,7 +677,7 @@ ul.row {
 #dropdownItemSS {
   color: lightgray !important;
   font-size: 1rem;
-  box-shadow: ;
+  // box-shadow: ;
 }
 
 #dropdown-item:hover {
@@ -589,8 +702,14 @@ ul.row {
   display: none;
 }
 
+#homeBackgroundColor {
+  background-color: black;
+}
+
 #nav-container {
   width: 60%;
+
+  @include fadeDown;
 }
 
 #portfolio {
@@ -615,30 +734,24 @@ ul.row {
   width: 70%;
 }
 
-@media screen and (min-width: 1800px) {
+@media only screen and (min-width: 1800px) {
   .landingCenterText {
     top: 20%;
   }
 }
-@media screen and (min-width: 1400px) {
+@media only screen and (min-width: 1400px) {
   .nav-link {
     font-size: 1.3rem;
   }
 }
 
-@media screen and (max-width: 1068px) {
+@media only screen and (max-width: 1068px) {
   .navbar {
     padding: 0.5rem 0.25rem;
   }
 }
 
-/* @media screen and (max-width: 1015px) {
-  .navbar {
-    padding: 0.5rem 0.25rem;
-  }
-} */
-
-@media screen and (max-width: 988px) {
+@media only screen and (max-width: 988px) {
   .logo h1 a {
     top: 2vw;
   }
@@ -647,5 +760,15 @@ ul.row {
   }
   #hamburger-nav {
     display: block;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .copyrightTextFontSize {
+    font-size: 1.6rem;
+  }
+
+  .nav-link {
+    font-size: 1.8rem;
   }
 }

@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Carousel from "../components/Carousel.jsx";
 import Footer from "../components/Footer";
-import "../App.css";
+import "../App.scss";
 
 const Portfolio = () => {
   return (

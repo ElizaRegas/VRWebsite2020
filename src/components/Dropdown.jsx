@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../App.css";
+import "../App.scss";
 
 const Dropdown = ({ setIsDropdownOpen }) => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 851);

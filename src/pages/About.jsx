@@ -3,21 +3,21 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import aboutImg from "../images/aboutAlt.jpg";
 // import upArrow from "../images/upArrow.png";
-import "../App.css";
+import "../App.scss";
 
 const About = () => {
   return (
     <section>
       <Header />
-      <div class="aboutSection" id="about">
-        <div class="landingAbout">
-          <div class="flex">
-            <div class="aboutImgDiv" data-aos="fade-right">
-              <img src={aboutImg} class="img-fluid" alt="" id="aboutImg" />
+      <div className="aboutSection" id="about">
+        <div className="landingAbout">
+          <div className="flex">
+            <div className="aboutImgDiv" data-aos="fade-right">
+              <img src={aboutImg} className="img-fluid" alt="" id="aboutImg" />
             </div>
-            <div class="aboutTextDiv" data-aos="fade-left">
-              <h3 class="aboutHeaders">Always Learning, Always Enjoying</h3>
-              <p class="aboutText">
+            <div className="aboutTextDiv" data-aos="fade-left">
+              <h3 className="aboutHeaders">Always Learning, Always Enjoying</h3>
+              <p className="aboutText">
                 I am an Atlanta native, which makes me a rarity in this city!
                 Though I have lived elsewhere over the years, Atlanta is the
                 home of my heart.
@@ -27,8 +27,8 @@ const About = () => {
                 Whether it be in a formal academic environment or exploring the
                 world on my own, I am always striving to learn more.
               </p>
-              <h3 class="aboutHeaders">Grit and Determination</h3>
-              <p class="aboutText">
+              <h3 className="aboutHeaders">Grit and Determination</h3>
+              <p className="aboutText">
                 In my late teens, I had the privilege of representing my country
                 internationally as a member of the US Jr. World Judo Team. Judo
                 teaches two important maxims: mutual welfare and benefit, and

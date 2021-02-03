@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Dropdown from "./Dropdown";
-import "../App.css";
+import "../App.scss";
 
 const HamburgerNav = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
@@ -10,7 +10,7 @@ const HamburgerNav = () => {
   return (
     <Router>
       <div id="mySidebar">
-        <div class="hamburgerNav" id="mySmallScreenNav">
+        <div className="hamburgerNav" id="mySmallScreenNav">
           {!sidebarIsOpen && (
             <i
               className="fa fa-2x fa-bars"

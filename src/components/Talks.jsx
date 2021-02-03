@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 // import upArrowWhite from "../images/upArrowWhite.png"
-import "../App.css";
+import "../App.scss";
 
 const Talks = () => {
   return (

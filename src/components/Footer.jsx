@@ -2,13 +2,13 @@ import React from "react";
 import github from "../images/github-white.png";
 import papercall from "../images/papercall-white.png";
 import twitter from "../images/twitter-white.png";
-import "../App.css";
+import "../App.scss";
 
 const Footer = () => {
   return (
     <footer>
       <div className="footer">
-        <div className="flex">
+        <div className="footerFlex" data-aos="fade-up">
           <div className="copyrightText">
             <p className="copyrightTextFontSize">© 2020 Valarie Regas</p>
           </div>
@@ -24,6 +24,7 @@ const Footer = () => {
                   width="28em"
                   height="28em"
                   alt="Github: Valarie Regas"
+                  className="socialImg"
                 ></img>
               </a>
             </li>
@@ -38,6 +39,7 @@ const Footer = () => {
                   width="28em"
                   height="28em"
                   alt="Papercall: Valarie Regas"
+                  className="socialImg"
                 ></img>
               </a>
             </li>
@@ -52,6 +54,7 @@ const Footer = () => {
                   width="28em"
                   height="28em"
                   alt="Twitter: Valarie Regas"
+                  className="socialImg"
                 ></img>
               </a>
             </li>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Dropdown from "./Dropdown";
-import "../App.css";
+import "../App.scss";
 import HamburgerNav from "./HamburgerNav";
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
     <Router>
       <header className="landing">
         <nav className="navbar">
-          <div className="logo" data-aos="fade-down">
+          <div className="logo">
             <h1>
               <a href="index.html">Valarie Regas</a>
             </h1>
@@ -19,7 +19,7 @@ const Header = () => {
           <div id="hamburger-nav">
             <HamburgerNav />
           </div>
-          <div id="nav-container" data-aos="fade-down">
+          <div id="nav-container">
             <ul className="flex floatRight navbar">
               <li className="nav-item">
                 <a className="nav-link" href="/">
