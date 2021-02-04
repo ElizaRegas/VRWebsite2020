@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 // import upArrowWhite from "../images/upArrowWhite.png"
+import mother from "../images/ListenToYourMother.png";
 import "../App.scss";
 
 const Talks = () => {
@@ -33,15 +34,20 @@ const Talks = () => {
 
         <div class="gallery">
           <ul class="row">
-          <li class="talkLinks">
+            <li class="talkLinks">
               <a
                 href="https://www.recallact.com/presentation/listen-your-mother-why-tech-needs-moms"
                 target="_blank"
                 rel="noopener noreferrer"
                 itemprop="url"
-                class="iframe imgFill"
               >
-                <div class="listenImg"></div>
+                <img
+                  class="iframe imgFill"
+                  src={mother}
+                  alt="We Rise Conference"
+                  itemprop="image"
+                  title="weriseconference"
+                />
               </a>
               <p class="whiteText">
                 "Listen to your Mother"
@@ -51,9 +57,8 @@ const Talks = () => {
                 </span>
               </p>
             </li>
-            
 
-            <li className="talkLinks" data-aos="zoom-in">
+            <li className="talkLinks">
               <a
                 href="https://www.recallact.com/presentation/ignite-talks-0"
                 target="_blank"
@@ -86,7 +91,7 @@ const Talks = () => {
           </ul>
 
           <ul className="row">
-          <li className="talkLinks row2">
+            <li className="talkLinks row2">
               <iframe
                 id="momAdvantage"
                 className="iframe imgFill"
@@ -111,6 +116,7 @@ const Talks = () => {
             <li id="youTube2" class="talkLinks row2">
               <iframe
                 class="iframe imgFill"
+                id="properCare"
                 src="https://www.youtube.com/embed/dCjmdXhQE4A"
                 frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
