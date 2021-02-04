@@ -5,32 +5,36 @@ import "../App.scss";
 
 const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
   return (
-    <div id="homeBackgroundColor">
-      <section>
-        <div className="landingBg">
-          <Header />
-          <div className="landing landingCenterText">
-            DevOps Engineer.
-            <br />
-            Tech Evangelist.
-            <br />
-            Relationship builder.
-            <br />
-            Queen of the YAMLs.
-            <br />
-            Total nerd.
-            <div className="bookMeFade">
-              <a href="/contact" className="btn buttonStyle" id="bookMeButton">
-                Book Me
-              </a>
+      <div id="homeBackgroundColor">
+        <section>
+          <div className="landingBg homeCenter">
+            <Header />
+            <div className="landingCenterText">
+              DevOps Engineer.
+              <br />
+              Tech Evangelist.
+              <br />
+              Relationship builder.
+              <br />
+              Queen of the YAMLs.
+              <br />
+              Total nerd.
+              <div className="bookMeFade">
+                <a
+                  href="/contact"
+                  className="btn buttonStyle"
+                  id="bookMeButton"
+                >
+                  Book Me
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
         <div>
           <Footer />
         </div>
-    </div>
+      </div>
   );
 };
 

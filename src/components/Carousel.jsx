@@ -14,7 +14,7 @@ import "../App.scss";
 
 const PortfolioItems = () => {
   return (
-    <div id="portfolioLinks" data-aos="fade-up">
+    <div id="portfolioLinks">
       <Carousel>
         <div className="container portfolioPic">
           <img src={clean} alt="clean titans application" />

@@ -21,7 +21,7 @@ export default function ContactUs() {
   }
 
   return (
-    <form className="contact-form" onSubmit={sendEmail} data-aos="fade-left">
+    <form className="contact-form" onSubmit={sendEmail}>
       <input className="contact-input" type="hidden" name="contact_number" />
       <label>Name</label>
       <br />

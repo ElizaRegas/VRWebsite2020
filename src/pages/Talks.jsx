@@ -33,27 +33,25 @@ const Talks = () => {
 
         <div class="gallery">
           <ul class="row">
-            <li className="talkLinks" data-aos="zoom-in">
-              <iframe
-                id="momAdvantage"
-                className="iframe imgFill"
-                src="https://www.youtube.com/embed/WHheVF9d4Z8"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen=""
-                title="The Mom Advantage"
-              ></iframe>
+          <li class="talkLinks">
+              <a
+                href="https://www.recallact.com/presentation/listen-your-mother-why-tech-needs-moms"
+                target="_blank"
+                rel="noopener noreferrer"
+                itemprop="url"
+                class="iframe imgFill"
+              >
+                <div class="listenImg"></div>
+              </a>
               <p class="whiteText">
-                "The Mom Advantage: Why Tech Needs Mommies"
+                "Listen to your Mother"
                 <br />
                 <span>
-                  <i>
-                    March 2018 - Women Who Code Atlanta <br />
-                    International Women's Day
-                  </i>
+                  <i> June 2018 - We RISE Conference </i>
                 </span>
               </p>
             </li>
+            
 
             <li className="talkLinks" data-aos="zoom-in">
               <a
@@ -88,26 +86,29 @@ const Talks = () => {
           </ul>
 
           <ul className="row">
-            <li class="talkLinks row2" data-aos="zoom-in">
-              <a
-                href="https://www.recallact.com/presentation/listen-your-mother-why-tech-needs-moms"
-                target="_blank"
-                rel="noopener noreferrer"
-                itemprop="url"
-                class="iframe imgFill"
-              >
-                <div class="listenImg"></div>
-              </a>
+          <li className="talkLinks row2">
+              <iframe
+                id="momAdvantage"
+                className="iframe imgFill"
+                src="https://www.youtube.com/embed/WHheVF9d4Z8"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen=""
+                title="The Mom Advantage"
+              ></iframe>
               <p class="whiteText">
-                "Listen to your Mother"
+                "The Mom Advantage: Why Tech Needs Mommies"
                 <br />
                 <span>
-                  <i> June 2018 - We RISE Conference </i>
+                  <i>
+                    March 2018 - Women Who Code Atlanta <br />
+                    International Women's Day
+                  </i>
                 </span>
               </p>
             </li>
 
-            <li id="youTube2" class="talkLinks row2" data-aos="zoom-in">
+            <li id="youTube2" class="talkLinks row2">
               <iframe
                 class="iframe imgFill"
                 src="https://www.youtube.com/embed/dCjmdXhQE4A"

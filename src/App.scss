@@ -66,6 +66,13 @@
   }
 }
 
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @mixin fade-timing {
   animation-duration: 1.5s;
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -98,6 +105,8 @@ a:hover {
 body {
   background-color: transparent;
   font-family: source code pro !important;
+  min-width: 320px !important;
+  width: auto !important;
 }
 
 footer {
@@ -139,6 +148,7 @@ ul.row {
 
 .aboutImgDiv {
   width: 58%;
+  @include fadeRight;
 }
 
 .aboutSection {
@@ -152,13 +162,16 @@ ul.row {
 .aboutTextDiv {
   width: 47%;
   padding-left: 3%;
+  @include fadeLeft;
 }
 
 .blackBackground {
   background-color: black !important;
 }
 
-.bookMeFades
+.bookMeFade {
+  @include fadeUp;
+}
 
 .buttonStyle {
   color: white;
@@ -268,8 +281,8 @@ ul.row {
   color: #dce5d8;
   font-size: 3rem;
   position: relative;
-  top: -4rem;
-  right: -13rem;
+  top: -1%;
+  right: -70%;
 }
 
 .contactBg {
@@ -297,6 +310,7 @@ ul.row {
   top: 8vw;
   color: white;
   font-size: 1.3vw;
+  @include fadeLeft;
 }
 
 .contact-input {
@@ -330,7 +344,7 @@ ul.row {
 }
 
 .copyrightTextFontSize {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .dropdown-menu {
@@ -372,6 +386,7 @@ ul.row {
   top: 1rem;
   right: -1rem;
   cursor: pointer;
+  @include fadeDown;
 }
 
 .faIcons {
@@ -393,7 +408,6 @@ ul.row {
   position: relative;
   left: 0;
   bottom: 0;
-  height: auto;
   width: 100%;
   padding: 1% 10%;
 }
@@ -408,6 +422,7 @@ ul.row {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  @include fadeUp;
 }
 
 .form-control {
@@ -432,9 +447,14 @@ ul.row {
   background: transparent;
 }
 
-/* .icons {
+.icons {
   width: 20%;
-} */
+  padding-right: 2%;
+}
+
+.iconFloat {
+  float: right;
+}
 
 .iframe {
   z-index: 99;
@@ -454,7 +474,7 @@ ul.row {
 }
 
 .landingBg {
-  background-image: url(images/landing.jpg);
+  background-image: url(images/vrlanding-med.jpg);
   background-attachment: initial;
   min-height: 64vw;
   max-width: 100vw;
@@ -472,6 +492,7 @@ ul.row {
   top: 25%;
   left: 1%;
   line-height: 250%;
+  padding: 2% 10% 0% 10%;
   @include fadeRight;
 }
 
@@ -509,7 +530,7 @@ ul.row {
 }
 
 .navbar-ss {
-  margin-top: -45%;
+  margin-top: -20%;
 }
 
 .nav-item {
@@ -528,7 +549,7 @@ ul.row {
 .nav-link {
   text-decoration: none;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .nav-link:hover {
@@ -536,7 +557,7 @@ ul.row {
 }
 
 .nav-link-ss {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: white;
 }
 
@@ -587,13 +608,14 @@ ul.row {
   height: 100%;
   width: 30%;
   position: fixed;
-  z-index: 2;
+  z-index: 200;
   top: 0;
   left: 70%;
   background-color: #9f0712;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  @include fadeLeft;
 }
 
 .socialImg {
@@ -605,6 +627,7 @@ ul.row {
   width: 50%;
   height: 22vw;
   padding: 0% 5% 5% 5%;
+  @include fadeUp;
 }
 
 .talksButtons {
@@ -643,7 +666,7 @@ ul.row {
   margin: 1vw 0vw;
 }
 
-#about {
+#aboutId {
   margin: 1rem 0rem;
 }
 
@@ -675,7 +698,7 @@ ul.row {
 
 #dropdown-item,
 #dropdownItemSS {
-  color: lightgray !important;
+  color: white !important;
   font-size: 1rem;
   // box-shadow: ;
 }
@@ -704,6 +727,7 @@ ul.row {
 
 #homeBackgroundColor {
   background-color: black;
+  height: 100vh;
 }
 
 #nav-container {
@@ -715,6 +739,10 @@ ul.row {
 #portfolio {
   background-color: black;
   height: 60vw;
+}
+
+#portfolioLinks {
+  @include fadeUp;
 }
 
 #portfolioLinks a:hover {
@@ -734,14 +762,227 @@ ul.row {
   width: 70%;
 }
 
-@media only screen and (min-width: 1800px) {
-  .landingCenterText {
-    top: 20%;
+@media only screen and (max-width: 1400px) {
+  .footer {
+    position: absolute;
+  }
+
+  #portfolio {
+    height: 90vh;
   }
 }
-@media only screen and (min-width: 1400px) {
-  .nav-link {
-    font-size: 1.3rem;
+
+@media only screen and (max-width: 900px) {
+  footer {
+    height: 0;
+  }
+
+  .homeCenter {
+    min-width: 100vw;
+  }
+
+  .aboutHeaders {
+    font-size: 1.4rem;
+  }
+
+  .aboutText {
+    font-size: .9rem;
+    line-height: 1;
+  }
+
+  .aboutImgDiv {
+    width: 100vw;
+    height: 80%;
+    position: absolute;
+    padding: 2vw 20vw;
+  }
+
+  .aboutTextDiv {
+    width: 100%;
+    position: absolute;
+    padding: 0 20%;
+    top: 60vw;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .buttonStyle {
+    font-size: 0.8rem !important;
+  }
+
+  .carousel {
+    width: 80% !important;
+  }
+
+  .closeButton {
+    right: -60%;
+  }
+
+  .carousel .control-dots {
+    display: none;
+  }
+
+  .copyrightTextFontSize {
+    font-size: 1rem;
+  }
+
+  .icons {
+    padding-right: 2%;
+  }
+
+  .landingAbout {
+    padding: 0;
+  }
+
+  .landingCenterText {
+    top: 55%;
+    font-size: 1.1rem;
+  }
+
+  .navbar-ss {
+    margin-top: 0;
+  }
+
+  .portfolioPic {
+    height: 30vw;
+    width: 60vw;
+  }
+
+  .socialImg {
+    width: 1.3rem;
+  }
+
+  #bookMeButton {
+    top: 3vh;
+  }
+
+  // #portfolioLinks {
+  //   position: relative;
+  //   top: 13vw;
+  // }
+}
+
+@media only screen and (max-width: 988px) {
+  .logo h1 a {
+    top: 2vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .sidebar {
+    width: 40%;
+    left: 60%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  // button.control-arrow.control-next {
+  //   display: none;
+  // }
+
+  .aboutTextDiv {
+    top: 65vw;
+  }
+
+  // .carousel {
+  //   top: -3vw;
+  //   height: 37vw;
+  // }
+
+  .techText {
+    font-size: .7rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .aboutTextDiv {
+    top: 68vw;
+  }
+
+  .aboutHeaders {
+    font-size: 1.2rem;
+  }
+
+  .landingBg {
+    background-image: url(images/vrlanding-med-mobile.jpg);
+    height: 69vh;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+
+  .logo {
+    width: 60%;
+  }
+
+  .logo h1 a {
+    font-size: 6vw;
+    top: 3.5vw;
+    display: inline-block;
+  }
+
+  .landingCenterText {
+    line-height: 1.5;
+    top: 71vh;
+  }
+
+  .nav-link-ss {
+    font-size: 1.2rem;
+  }
+
+  // .carousel {
+  //   top: -7vw;
+  //   height:40vw;
+  // }
+
+  .techText {
+    font-size: .7rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .copyrightTextFontSize {
+    font-size: .7rem;
+  }
+
+  .faIcons {
+    padding-left: .6rem;
+  }
+
+  .icons {
+    padding: 0;
+  }
+
+  .sidebar {
+    width: 40%;
+  }
+
+  .socialImg {
+    width: 1rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .aboutHeaders {
+    font-size: 1rem;
+  }
+
+  .aboutText {
+    font-size: .85rem;
+  }
+
+  .aboutTextDiv {
+    top: 74vw;
+  }
+
+  .nav-link-ss {
+    font-size: .9rem;
+  }
+
+  .sidebar {
+    width: 45%;
+    left: 55%;
   }
 }
 
@@ -751,15 +992,89 @@ ul.row {
   }
 }
 
-@media only screen and (max-width: 988px) {
-  .logo h1 a {
-    top: 2vw;
+@media only screen and (max-width: 1200px) {
+  .carousel-status {
+    display: none !important;
   }
+
+  #hamburger-nav {
+    display: block;
+  }
+
   #nav-container {
     display: none;
   }
-  #hamburger-nav {
+
+  #portfolioLinks {
+    position: relative;
+    top: 9vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #portfolioLinks {
+    top: 16vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel * {
     display: block;
+  }
+
+
+
+  .carousel .slide img {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .carousel .slider-wrapper {
+    height: 100vw;
+    display: inline-block;
+  }
+
+  .portfolioCard {
+    position: absolute;
+    top: 65vw;
+    left: 14%;
+    width: 72%;
+    border-left: none !important;
+    text-align: center;
+    overflow: auto;
+    ;
+  }
+
+  #portfolioLinks {
+    top: 5vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #portfolioLinks {
+    top: 15vw;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #dropdownItemSS {
+    font-size: .7rem;
+  }
+  
+  #portfolioLinks {
+    top: 27vw;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .nav-link {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .landingCenterText {
+    top: 20%;
   }
 }
 
@@ -770,5 +1085,9 @@ ul.row {
 
   .nav-link {
     font-size: 1.8rem;
+  }
+
+  #dropdown-item {
+    font-size: 1.5rem;
   }
 }

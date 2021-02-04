@@ -18,7 +18,7 @@ const HamburgerNav = () => {
             ></i>
           )}
           {sidebarIsOpen && (
-            <div className="sidebar" data-aos="fade-left">
+            <div className="sidebar">
               <div
                 className="closeButton"
                 onClick={() => setSidebarIsOpen(false)}
@@ -34,7 +34,7 @@ const HamburgerNav = () => {
                 <li className="nav-item-ss">
                   <a
                     className="nav-link-ss"
-                    href="/#about"
+                    href="/about"
                     onClick={() => setSidebarIsOpen(false)}
                   >
                     About
