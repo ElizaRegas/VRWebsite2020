@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Dropdown from "./Dropdown";
+import github from "../images/github-white.png";
+import papercall from "../images/papercall-white.png";
+import twitter from "../images/twitter-white.png";
 import "../App.scss";
 
 const HamburgerNav = () => {
@@ -79,6 +82,57 @@ const HamburgerNav = () => {
                   </li>
                 )}
               </ul>
+
+              {/* Social media icons */}
+              <div className="icons-ss">
+                <ul className="flex iconFloat-ss">
+                  <li className="faIcons-ss">
+                    <a
+                      href="https://github.com/valarier"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={github}
+                        width="28em"
+                        height="28em"
+                        alt="Github: Valarie Regas"
+                        className="socialImg"
+                      ></img>
+                    </a>
+                  </li>
+                  <li className="faIcons-ss">
+                    <a
+                      href="https://www.papercall.io/speakers/valarieregas"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={papercall}
+                        width="28em"
+                        height="28em"
+                        alt="Papercall: Valarie Regas"
+                        className="socialImg"
+                      ></img>
+                    </a>
+                  </li>
+                  <li className="faIcons-ss">
+                    <a
+                      href="https://twitter.com/ValarieRegas"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={twitter}
+                        width="28em"
+                        height="28em"
+                        alt="Twitter: Valarie Regas"
+                        className="socialImg"
+                      ></img>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           )}
         </div>

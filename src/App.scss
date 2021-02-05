@@ -284,10 +284,10 @@ ul.row {
   border: none;
   cursor: pointer;
   color: #dce5d8;
-  font-size: 3rem;
-  position: relative;
-  top: -1%;
-  right: -70%;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 2%;
+  right: 10%;
 }
 
 .contactBg {
@@ -397,6 +397,10 @@ ul.row {
 .faIcons {
   padding-left: 2rem;
   vertical-align: center;
+}
+
+.faIcons-ss:not(:last-child) {
+  padding-right: 10%;
 }
 
 .flex {
@@ -530,7 +534,8 @@ ul.row {
 }
 
 .navbar-ss {
-  margin-top: -20%;
+  position: relative;
+  top: -5%;
 }
 
 .nav-item {
@@ -557,7 +562,7 @@ ul.row {
 }
 
 .nav-link-ss {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
 }
 
@@ -605,12 +610,12 @@ ul.row {
 }
 
 .sidebar {
-  height: 100%;
-  width: 30%;
+  height: 100vh;
+  width: 25%;
   position: fixed;
   z-index: 200;
   top: 0;
-  left: 70%;
+  left: 75%;
   background-color: #9f0712;
   overflow-x: hidden;
   transition: 0.5s;
@@ -814,6 +819,10 @@ ul.row {
 }
 
 @media only screen and (max-width: 900px) {
+  footer {
+    display: none;
+  }
+
   .homeCenter {
     min-width: 100vw;
   }
@@ -855,12 +864,11 @@ ul.row {
     display: none;
   }
 
-  .closeButton {
-    right: -60%;
-  }
-
   .contactBg {
-    transform: rotateY(180deg);
+    background-image: url(images/valContact-900.jpg);
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .contact-form {
@@ -873,10 +881,6 @@ ul.row {
 
   .copyrightTextFontSize {
     font-size: 1rem;
-  }
-
-  .footer {
-    position: absolute;
   }
 
   .icons {
@@ -896,17 +900,9 @@ ul.row {
     margin-top: 0;
   }
 
-  .noReverse {
-    transform: rotateY(-180deg);
-  }
-
   .portfolioPic {
     height: 30vw;
     width: 60vw;
-  }
-
-  .sidebar {
-    height: 100vw;
   }
 
   .socialImg {
@@ -926,8 +922,8 @@ ul.row {
 
 @media only screen and (max-width: 800px) {
   .sidebar {
-    width: 40%;
-    left: 60%;
+    width: 30%;
+    left: 70%;
   }
 
   #portfolioLinks {
@@ -966,10 +962,6 @@ ul.row {
 }
 
 @media only screen and (max-width: 600px) {
-  footer {
-    display: none;
-  }
-
   .aboutTextDiv {
     top: 68vw;
   }
@@ -994,7 +986,6 @@ ul.row {
 
   .contactBg {
     background-image: url(images/valContact-ss.jpg);
-    transform: rotateY(0);
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1029,11 +1020,7 @@ ul.row {
   }
 
   .nav-link-ss {
-    font-size: 1.2rem;
-  }
-
-  .noReverse {
-    transform: rotateY(0);
+    font-size: 1rem;
   }
 
   .portfolioCard {
@@ -1100,6 +1087,7 @@ ul.row {
 
   .sidebar {
     width: 40%;
+    left: 60%;
   }
 
   .socialImg {
@@ -1175,10 +1163,6 @@ ul.row {
 // Media queries / max-height
 
 @media only screen and (max-height: 600px) {
-  footer {
-    display: none;
-  }
-
   .navbar-ss {
     margin-top: -28%;
   }
