@@ -1216,3 +1216,17 @@ ul.row {
     font-size: 1.5rem;
   }
 }
+
+@media only screen and (max-height: 600px) {
+  footer {
+    display: none;
+  }
+
+  .nav-link-ss {
+    font-size: 1.1rem;
+  }
+
+  #portfolio {
+    height: 150vh;
+  }
+}
