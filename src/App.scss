@@ -935,6 +935,18 @@ ul.row {
     font-size: 1.2rem;
   }
 
+  .contactBg {
+    background-image: url(images/valContact-ss.jpg);
+    transform: rotateY(0);
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .contact-form {
+    margin-top: 60vh;
+  }
+
   .landingBg {
     background-image: url(images/vrlanding-med-mobile.jpg);
     height: 69vh;
@@ -961,6 +973,10 @@ ul.row {
 
   .nav-link-ss {
     font-size: 1.2rem;
+  }
+
+  .noReverse {
+    transform: rotateY(0);
   }
 
   // .carousel {
