@@ -462,6 +462,11 @@ ul.row {
   padding-right: 2%;
 }
 
+.icons-ss {
+  position: relative;
+  top: 10%;
+}
+
 .iconFloat {
   float: right;
 }
@@ -877,7 +882,7 @@ ul.row {
   }
 
   .contact-form {
-    margin: 50vw 50vw 20vw 50vw;
+    margin: 84vw 50vw 16vw 50vw;
     font-size: 2vw;
   }
 
@@ -1065,8 +1070,12 @@ ul.row {
     height: 26vh;
   }
 
+  #portfolio {
+    height: 100vh;
+  }
+
   #portfolioLinks {
-    top: 5vw;
+    top: 5%;
   }
 
   #properCare {
@@ -1075,6 +1084,7 @@ ul.row {
 
   #speaking {
     height: fit-content;
+    padding-top: 2rem;
   }
 
   #talksBook {
@@ -1103,10 +1113,6 @@ ul.row {
   .socialImg {
     width: 1rem;
   }
-
-  #portfolioLinks {
-    top: 15vw;
-  }
 }
 
 @media only screen and (max-width: 420px) {
@@ -1133,10 +1139,6 @@ ul.row {
 
   #dropdownItemSS {
     font-size: 0.7rem;
-  }
-
-  #portfolioLinks {
-    top: 27vw;
   }
 }
 
