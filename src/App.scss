@@ -779,9 +779,9 @@ ul.row {
 }
 
 @media only screen and (max-width: 900px) {
-  footer {
-    height: 0;
-  }
+  // footer {
+  //   height: 0;
+  // }
 
   .homeCenter {
     min-width: 100vw;
@@ -842,6 +842,10 @@ ul.row {
 
   .copyrightTextFontSize {
     font-size: 1rem;
+  }
+
+  .footer {
+    position: absolute;
   }
 
   .icons {
@@ -927,6 +931,10 @@ ul.row {
 }
 
 @media only screen and (max-width: 600px) {
+  footer {
+    display: none;
+  }
+
   .aboutTextDiv {
     top: 68vw;
   }
@@ -1155,7 +1163,7 @@ ul.row {
   }
 
   #momAdvantage {
-    height: 18vh;
+    height: 26vh;
   }
 
   #portfolioLinks {
@@ -1163,7 +1171,7 @@ ul.row {
   }
 
   #properCare {
-    height: 18vh;
+    height: 26vh;
   }
 }
 
