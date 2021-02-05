@@ -288,6 +288,7 @@ ul.row {
   position: absolute;
   top: 2%;
   right: 10%;
+  z-index: 10;
 }
 
 .contactBg {
@@ -780,6 +781,10 @@ ul.row {
     display: none !important;
   }
 
+  .icons {
+    display: none;
+  }
+
   #hamburger-nav {
     display: block;
   }
@@ -873,6 +878,7 @@ ul.row {
 
   .contact-form {
     margin: 50vw 50vw 20vw 50vw;
+    font-size: 2vw;
   }
 
   .contact-input {
@@ -940,6 +946,10 @@ ul.row {
 @media only screen and (max-width: 750px) {
   .aboutTextDiv {
     top: 65vw;
+  }
+
+  .contact-form {
+    margin-top: 65vw;
   }
 
   .row2 {
