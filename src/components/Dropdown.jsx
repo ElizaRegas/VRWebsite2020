@@ -4,6 +4,7 @@ import "../App.scss";
 const Dropdown = ({ setIsDropdownOpen }) => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 851);
 
+  // Event listener for dropdown items in the hamburger nav
   useEffect(() => {
     window.addEventListener(
       "resize",

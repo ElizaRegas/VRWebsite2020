@@ -1,9 +1,9 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
-
 import '../App.scss';
 
+// All functionality for emailjs.
 export default function ContactUs() {
 
   init("user_Tpz2raJQqzHJ9GS3cShGu");
@@ -20,6 +20,7 @@ export default function ContactUs() {
       e.target.reset();
   }
 
+  // Input form
   return (
     <form className="contact-form" onSubmit={sendEmail}>
       <input className="contact-input" type="hidden" name="contact_number" />

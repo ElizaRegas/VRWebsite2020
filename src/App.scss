@@ -1,3 +1,4 @@
+// Keyframe animations
 @keyframes fadeRight {
   0% {
     opacity: 0;
@@ -66,6 +67,8 @@
   }
 }
 
+// -------------------------------------------------------------------------------
+//Mixins
 @mixin center {
   position: absolute;
   top: 50%;
@@ -98,6 +101,8 @@
   @include fade-timing;
 }
 
+// -------------------------------------------------------------------------------
+// CSS declarations for screens between 1200px width and 2000 px width
 a:hover {
   text-decoration: none;
 }
@@ -496,11 +501,6 @@ ul.row {
   @include fadeRight;
 }
 
-// .listenImg {
-//   background-image: url("./images/ListenToYourMother.png");
-//   height: 100%;
-// }
-
 .logo {
   width: 40%;
   padding-top: 2%;
@@ -700,7 +700,6 @@ ul.row {
 #dropdownItemSS {
   color: white !important;
   font-size: 1rem;
-  // box-shadow: ;
 }
 
 #dropdown-item:hover {
@@ -732,7 +731,6 @@ ul.row {
 
 #nav-container {
   width: 60%;
-
   @include fadeDown;
 }
 
@@ -763,26 +761,59 @@ ul.row {
   width: 70%;
 }
 
-@media only screen and (max-width: 1700px) {
-
-}
+// -------------------------------------------------------------------------------
+// Media queries / max-width
 
 @media only screen and (max-width: 1400px) {
-  // .footer {
-  //   position: absolute;
-  //   bottom: 0;
-  // }
-
   #portfolio {
     height: 90vh;
   }
 }
 
-@media only screen and (max-width: 900px) {
-  // footer {
-  //   height: 0;
-  // }
+@media only screen and (max-width: 1200px) {
+  .carousel-status {
+    display: none !important;
+  }
 
+  #hamburger-nav {
+    display: block;
+  }
+
+  #nav-container {
+    display: none;
+  }
+
+  #portfolioLinks {
+    position: relative;
+    top: 9vw;
+  }
+
+  #speaking {
+    height: 90vw;
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .navbar {
+    padding: 0.5rem 0.25rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .logo h1 a {
+    top: 2vw;
+  }
+
+  #speaking {
+    margin-top: 3rem;
+  }
+
+  #talksBrowse {
+    width: fit-content;
+  }
+}
+
+@media only screen and (max-width: 900px) {
   .homeCenter {
     min-width: 100vw;
   }
@@ -891,17 +922,6 @@ ul.row {
     color: #9f0712;
     margin-top: 5vw;
   }
-
-  // #portfolioLinks {
-  //   position: relative;
-  //   top: 13vw;
-  // }
-}
-
-@media only screen and (max-width: 988px) {
-  .logo h1 a {
-    top: 2vw;
-  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -909,24 +929,39 @@ ul.row {
     width: 40%;
     left: 60%;
   }
+
+  #portfolioLinks {
+    top: 16vw;
+  }
+
+  #speaking {
+    margin-top: 3rem;
+    padding-top: 5rem;
+    height: 105vw;
+  }
 }
 
 @media only screen and (max-width: 750px) {
-  // button.control-arrow.control-next {
-  //   display: none;
-  // }
-
   .aboutTextDiv {
     top: 65vw;
   }
 
-  // .carousel {
-  //   top: -3vw;
-  //   height: 37vw;
-  // }
+  .row2 {
+    margin-top: 15vw;
+    margin-bottom: 50%;
+  }
 
   .techText {
     font-size: 0.7rem;
+  }
+
+  .whiteText {
+    padding-bottom: 10%;
+    font-size: .85rem;
+  }
+
+  #speaking {
+    height: fit-content;
   }
 }
 
@@ -941,6 +976,20 @@ ul.row {
 
   .aboutHeaders {
     font-size: 1.2rem;
+  }
+
+  .carousel * {
+    display: block;
+  }
+
+  .carousel .slide img {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .carousel .slider-wrapper {
+    height: 100vw;
+    display: inline-block;
   }
 
   .contactBg {
@@ -987,13 +1036,19 @@ ul.row {
     transform: rotateY(0);
   }
 
-  // .carousel {
-  //   top: -7vw;
-  //   height:40vw;
-  // }
+  .portfolioCard {
+    position: absolute;
+    top: 65vw;
+    left: 14%;
+    width: 72%;
+    border-left: none !important;
+    text-align: center;
+    overflow: auto;
+  }
 
   .row2 {
     margin: 0;
+    margin-top: 2vw;
   }
 
   .talkLinks {
@@ -1007,6 +1062,18 @@ ul.row {
 
   .techText {
     font-size: 0.7rem;
+  }
+
+  #momAdvantage {
+    height: 26vh;
+  }
+
+  #portfolioLinks {
+    top: 5vw;
+  }
+
+  #properCare {
+    height: 26vh;
   }
 
   #speaking {
@@ -1038,6 +1105,10 @@ ul.row {
   .socialImg {
     width: 1rem;
   }
+
+  #portfolioLinks {
+    top: 15vw;
+  }
 }
 
 @media only screen and (max-width: 420px) {
@@ -1061,127 +1132,7 @@ ul.row {
     width: 45%;
     left: 55%;
   }
-}
 
-@media only screen and (max-width: 1068px) {
-  .navbar {
-    padding: 0.5rem 0.25rem;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .carousel-status {
-    display: none !important;
-  }
-
-  #hamburger-nav {
-    display: block;
-  }
-
-  #nav-container {
-    display: none;
-  }
-
-  #portfolioLinks {
-    position: relative;
-    top: 9vw;
-  }
-
-  #speaking {
-    height: 90vw;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  #speaking {
-    margin-top: 3rem;
-  }
-
-  #talksBrowse {
-    width: fit-content;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  #portfolioLinks {
-    top: 16vw;
-  }
-
-  #speaking {
-    margin-top: 3rem;
-    padding-top: 5rem;
-    height: 105vw;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .row2 {
-    margin-top: 15vw;
-  }
-  .whiteText {
-    padding-bottom: 10%;
-    font-size: .85rem;
-  }
-
-  .row2 {
-    margin-bottom: 50%;
-  }
-
-  #speaking {
-    height: fit-content;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .carousel * {
-    display: block;
-  }
-
-  .carousel .slide img {
-    width: 100% !important;
-    height: auto;
-  }
-
-  .carousel .slider-wrapper {
-    height: 100vw;
-    display: inline-block;
-  }
-
-  .portfolioCard {
-    position: absolute;
-    top: 65vw;
-    left: 14%;
-    width: 72%;
-    border-left: none !important;
-    text-align: center;
-    overflow: auto;
-  }
-
-  .row2 {
-    margin-bottom: 0;
-    margin-top: 2vw;
-  }
-
-  #momAdvantage {
-    height: 26vh;
-  }
-
-  #portfolioLinks {
-    top: 5vw;
-  }
-
-  #properCare {
-    height: 26vh;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  #portfolioLinks {
-    top: 15vw;
-  }
-}
-
-@media only screen and (max-width: 420px) {
   #dropdownItemSS {
     font-size: 0.7rem;
   }
@@ -1190,6 +1141,9 @@ ul.row {
     top: 27vw;
   }
 }
+
+// -------------------------------------------------------------------------------
+// Media queries / min-width
 
 @media only screen and (min-width: 1400px) {
   .nav-link {
@@ -1216,6 +1170,9 @@ ul.row {
     font-size: 1.5rem;
   }
 }
+
+// -------------------------------------------------------------------------------
+// Media queries / max-height
 
 @media only screen and (max-height: 600px) {
   footer {
