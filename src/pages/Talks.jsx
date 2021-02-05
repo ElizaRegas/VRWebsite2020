@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-// import upArrowWhite from "../images/upArrowWhite.png"
 import mother from "../images/ListenToYourMother.jpg";
 import "../App.scss";
 
@@ -135,14 +134,6 @@ const Talks = () => {
               </p>
             </li>
           </ul>
-          {/* <a href="/">
-            <img
-              className="upArrow upArrowAbout"
-              src={upArrowWhite}
-              alt="back to the top"
-              data-aos="zoom-in"
-            />
-          </a> */}
         </div>
       </div>
       <Footer />

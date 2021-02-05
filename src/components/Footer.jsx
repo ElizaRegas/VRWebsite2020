@@ -12,6 +12,8 @@ const Footer = () => {
           <div className="copyrightText">
             <p className="copyrightTextFontSize">© 2020 Valarie Regas</p>
           </div>
+
+          {/* Social media icons */}
           <div className="icons">
             <ul className="flex iconFloat">
               <li className="faIcons">
