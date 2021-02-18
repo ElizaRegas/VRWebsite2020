@@ -15,14 +15,14 @@ function App() {
   return (
     <main>
       <Switch>
-        <Route
+        {/* <Route
           path="#about"
           component={About}
           isDropdownOpen={isDropdownOpen}
           setIsDropdownOpen={setIsDropdownOpen}
           sidebarIsOpen={sidebarIsOpen}
           setSidebarIsOpen={setSidebarIsOpen}
-        />
+        /> */}
         <Route
           path="/portfolio"
           component={Portfolio}
@@ -31,14 +31,14 @@ function App() {
           sidebarIsOpen={sidebarIsOpen}
           setSidebarIsOpen={setSidebarIsOpen}
         />
-        <Route
+        {/* <Route
           path="#talks"
           component={Talks}
           isDropdownOpen={isDropdownOpen}
           setIsDropdownOpen={setIsDropdownOpen}
           sidebarIsOpen={sidebarIsOpen}
           setSidebarIsOpen={setSidebarIsOpen}
-        />
+        /> */}
         <Route
           path="/contact"
           component={Contact}

@@ -725,7 +725,7 @@ ul.row {
 }
 
 .footerBg {
-  background-image: url(images/vrlanding-med.jpg);
+  background-image: url(images/vrlanding_footer.png);
   background-attachment: fixed;
   min-height: 64vw;
   max-width: 100%;
@@ -1195,16 +1195,22 @@ ul.row {
 
 #talksBook {
   width: 15%;
+
+  @include fadeRight;
 }
 
 #talksBrowse {
   width: 15%;
+
+  @include fadeLeft;
 }
 
 #talksHeading {
   color: white;
   padding-top: 1%;
   width: 70%;
+
+  @include fadeDown;
 }
 
 // -------------------------------------------------------------------------------

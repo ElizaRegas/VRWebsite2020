@@ -27,13 +27,13 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
+                <a className="nav-link" href="/#about">
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/portfolio">
-                  Portfolio
+                <a className="nav-link" href="/#speaking">
+                  Talks
                 </a>
               </li>
               <li className="nav-item dropdown">

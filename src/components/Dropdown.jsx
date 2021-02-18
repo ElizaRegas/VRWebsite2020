@@ -23,16 +23,16 @@ const Dropdown = ({ setIsDropdownOpen }) => {
         className="dropdown-menu"
         aria-labelledby="navbarDropdown"
       >
-        <div>
+        {/* <div>
           <a
             id={`${isSmallScreen ? "dropdownItemSS" : "dropdown-item"}`}
-            href="/talks"
+            href="/portfolio"
             rel="noopener noreferrer"
             onClick={() => setIsDropdownOpen(false)}
           >
-            Speaking
+            Portfolio
           </a>
-        </div>
+        </div> */}
         <div>
           <a
             id={`${isSmallScreen ? "dropdownItemSS" : "dropdown-item"}`}

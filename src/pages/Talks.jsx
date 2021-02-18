@@ -32,6 +32,9 @@ const Talks = () => {
         <TalkCards />
 
       </div>
+      <div className="blankSpace">
+        <div className="footerBg"></div>
+      </div>
     </section>
   );
 };
