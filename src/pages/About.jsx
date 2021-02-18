@@ -1,14 +1,11 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import aboutImg from "../images/aboutAlt.jpg";
 import "../App.scss";
 
 const About = () => {
   return (
-    <div>
+    <div id="about">
       <section id="aboutCenter">
-        <Header />
         <div className="aboutSection" id="aboutId">
           <div className="landingAbout">
             <div className="flex">
@@ -54,9 +51,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      <div>
-        <Footer />
-      </div>
     </div>
   );
 };

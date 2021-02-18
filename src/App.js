@@ -1,32 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Talks from "./pages/Talks";
 import Contact from "./pages/Contact";
-import AOS from "aos";
+// import AOS from "aos";
 import "./App.scss";
 
 function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
 
-  useEffect(() => {
-    AOS.init({
-      easing: "ease-out-back",
-      duration: 800,
-      delay: 500,
-      once: false,
-      disable: "mobile",
-    });
-  }, []);
-
   return (
     <main>
       <Switch>
         <Route
-          path="/about"
+          path="#about"
           component={About}
           isDropdownOpen={isDropdownOpen}
           setIsDropdownOpen={setIsDropdownOpen}
@@ -42,7 +32,7 @@ function App() {
           setSidebarIsOpen={setSidebarIsOpen}
         />
         <Route
-          path="/talks"
+          path="#talks"
           component={Talks}
           isDropdownOpen={isDropdownOpen}
           setIsDropdownOpen={setIsDropdownOpen}

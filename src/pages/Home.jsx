@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
+import About from "../pages/About";
+import Talks from "../pages/Talks";
 import Footer from "../components/Footer";
 import "../App.scss";
 
@@ -22,7 +24,7 @@ const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
               <div className="bookMeFade">
                 <a
                   href="/contact"
-                  className="btn buttonStyle"
+                  className="btn buttonStyle talksButtons"
                   id="bookMeButton"
                 >
                   Book Me
@@ -32,6 +34,8 @@ const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
           </div>
         </section>
         <div>
+          <About />
+          <Talks />
           <Footer />
         </div>
       </div>

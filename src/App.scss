@@ -69,11 +69,33 @@
 
 // -------------------------------------------------------------------------------
 //Mixins
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @mixin center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin gradient {
+  background-image: linear-gradient(
+    to right bottom,
+    $color-grey-dark-2, $color-black
+  );
 }
 
 @mixin fade-timing {
@@ -101,6 +123,52 @@
   @include fade-timing;
 }
 
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == huge-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
+}
+
+// ---------------------------------- VARIABLES
+// COLORS
+$color-red: #9f0712;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+// FONT
+$default-font-size: 1.6rem;
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 2.5rem;
+
 // -------------------------------------------------------------------------------
 // CSS declarations for screens between 1200px width and 2000 px width
 a:hover {
@@ -112,6 +180,7 @@ body {
   font-family: source code pro !important;
   min-width: 320px !important;
   width: auto !important;
+  z-index: -1;
 }
 
 footer {
@@ -134,7 +203,7 @@ form .submit:hover {
 }
 
 html {
-  background-color: #9f0712;
+  background-color: $color-red;
 }
 
 ul {
@@ -178,15 +247,248 @@ ul.row {
   @include fadeUp;
 }
 
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: $default-font-size;
+
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: red;
+    color: $color-white;
+
+    &::after {
+      background-color: red;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: red;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid red;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: red;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(0);
+  }
+}
+
 .buttonStyle {
   color: white;
-  background: #9f0712;
+  background: $color-red;
   border-radius: 100px !important;
-  font-size: 1vw !important;
+  font-size: 1.2vw !important;
 }
 
 .buttonStyle:hover {
   color: slategray;
+}
+
+.card {
+  // FUNCTIONALITY
+  position: relative;
+  height: 35rem;
+  border: 3px solid transparent;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-left: 2rem !important;
+  }
+
+  &__side {
+    height: 34.55rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &--front {
+      background-color: $color-white;
+    }
+  }
+
+  // FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    &--1 {
+      background-image: url(images/VRegas_HS1_cropped.jpg);
+    }
+
+    &--2 {
+      background-image: url(images/Val_speaking2_cropped.jpg);
+    }
+
+    &--3 {
+      background-image: url(images/VRegas1_cropped.jpg);
+    }
+
+    &--4 {
+      background-image: url(images/VRegas_HS2_cropped.jpg);
+    }
+  }
+
+  &__details {
+    padding: 1rem .5rem;
+    color: $color-black;
+
+    &:hover {
+      color: $color-grey-dark;
+    }
+  }
+
+  // FRONT SIDE STYLING
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: .7rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+
+  //@include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    height: auto;
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    // FRONT SIDE STYLING
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-value {
+      font-size: 4rem;
+    }
+  }
 }
 
 .carousel {
@@ -422,8 +724,15 @@ ul.row {
   padding: 1% 10%;
 }
 
-.footerMargin {
-  padding-top: 1rem;
+.footerBg {
+  background-image: url(images/vrlanding-med.jpg);
+  background-attachment: fixed;
+  min-height: 64vw;
+  max-width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .footerFlex {
@@ -433,6 +742,10 @@ ul.row {
   justify-content: space-between;
   padding: 0.5rem 1rem;
   @include fadeUp;
+}
+
+.footerMargin {
+  padding-top: 1rem;
 }
 
 .form-control {
@@ -455,6 +768,35 @@ ul.row {
 
 .header {
   background: transparent;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    red,
+    blue
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
 }
 
 .icons {
@@ -490,7 +832,7 @@ ul.row {
 
 .landingBg {
   background-image: url(images/vrlanding-med.jpg);
-  background-attachment: initial;
+  background-attachment: fixed;
   min-height: 64vw;
   max-width: 100vw;
   -webkit-background-size: cover;
@@ -600,7 +942,7 @@ ul.row {
 }
 
 .portfolioTitleText {
-  color: #9f0712;
+  color: $color-red;
   font-size: 2vw;
   font-weight: bolder;
   font-family: Homemade Apple;
@@ -611,8 +953,85 @@ ul.row {
   font-size: 1.4vw;
 }
 
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+
+  @include clearfix;
+
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
+    }
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+  }
+
+  .col-2-of-3 {
+    width: calc(
+      2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}
+    );
+  }
+
+  .col-1-of-4 {
+    width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+  }
+
+  .col-2-of-4 {
+    width: calc(
+      2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}
+    );
+  }
+
+  .col-3-of-4 {
+    width: calc(
+      3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal}
+    );
+  }
+}
+
 .row2 {
   margin: 5vw 0vw 0vw 0vw;
+}
+
+.section-tours {
+  background-color: $color-red;
+  padding: 2rem;
+  margin-top: 3rem;
+
+  @include respond(tab-port) {
+    padding: 20rem 0 10rem 0;
+  }
 }
 
 .sidebar {
@@ -622,7 +1041,7 @@ ul.row {
   z-index: 200;
   top: 0;
   left: 75%;
-  background-color: #9f0712;
+  background-color: $color-red;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -641,19 +1060,28 @@ ul.row {
   @include fadeUp;
 }
 
-.talksButtons {
-  padding: 1%;
-  height: fit-content;
-  width: 15%;
-  margin: 0% 5%;
-}
+// .talksButtons {
+//   padding: 3% 10%;
+// }
 
 .talksButtonsTopPadding {
-  padding-top: 1.5rem;
+  padding-top: 1rem;
 }
 
 .techText {
-  color: #9f0712;
+  color: $color-red;
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .upArrow {
@@ -684,8 +1112,7 @@ ul.row {
 #bookMeButton {
   position: relative;
   top: 5vh;
-  left: 7%;
-  padding: 3% 13%;
+  left: 0;
 }
 
 #contactButton {
@@ -764,6 +1191,14 @@ ul.row {
   padding-bottom: 5vw;
   margin-top: 1rem;
   height: 100%;
+}
+
+#talksBook {
+  width: 15%;
+}
+
+#talksBrowse {
+  width: 15%;
 }
 
 #talksHeading {
@@ -926,7 +1361,7 @@ ul.row {
 
   #contactButton {
     background-color: white;
-    color: #9f0712;
+    color: $color-red;
     margin-top: 5vw;
   }
 }
@@ -968,7 +1403,7 @@ ul.row {
 
   .whiteText {
     padding-bottom: 10%;
-    font-size: .85rem;
+    font-size: 0.85rem;
   }
 
   #speaking {
