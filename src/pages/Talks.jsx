@@ -1,6 +1,6 @@
 import React from "react";
 import TalkCards from "../components/TalkCards";
-import mother from "../images/ListenToYourMother.jpg";
+// import mother from "../images/ListenToYourMother.jpg";
 import "../App.scss";
 
 const Talks = () => {

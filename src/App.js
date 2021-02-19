@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
+// import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
-import Talks from "./pages/Talks";
+// import Talks from "./pages/Talks";
 import Contact from "./pages/Contact";
 // import AOS from "aos";
 import "./App.scss";
