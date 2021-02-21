@@ -9,9 +9,9 @@ const Header = () => {
 
   return (
     <Router>
-      <header className="landing">
-        <nav className="navbar">
-          <div className="logo">
+      <header className="headerTop">
+        <nav className="headerTop__container">
+          <div className="headerTop__logo">
             <h1>
               <a href="index.html">Valarie Regas</a>
             </h1>
@@ -19,26 +19,26 @@ const Header = () => {
           <div id="hamburger-nav">
             <HamburgerNav />
           </div>
-          <div id="nav-container">
-            <ul className="flex floatRight navbar">
-              <li className="nav-item">
-                <a className="nav-link" href="/">
+          <div className="headerTop__nav-container">
+            <ul className="flex">
+              <li className="headerTop__nav-container--nav-item">
+                <a className="headerTop__nav-container--nav-link" href="/">
                   Home
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/#about">
+              <li className="headerTop__nav-container--nav-item">
+                <a className="headerTop__nav-container--nav-link" href="/#about">
                   About
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/#speaking">
+              <li className="headerTop__nav-container--nav-item">
+                <a className="headerTop__nav-container--nav-link" href="/#speaking">
                   Talks
                 </a>
               </li>
-              <li className="nav-item dropdown">
+              <li className="headerTop__nav-container--nav-item dropdown">
                 <div
-                  className="nav-link dropdown-toggle mediaDiv"
+                  className="headerTop__nav-container--nav-link"
                   id="navbarDropdown"
                   role="button"
                   data-toggle="dropdown"
@@ -55,8 +55,8 @@ const Header = () => {
                   />
                 )}
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/contact">
+              <li className="headerTop__nav-container--nav-item">
+                <a className="headerTop__nav-container--nav-link" href="/contact">
                   Contact
                 </a>
               </li>

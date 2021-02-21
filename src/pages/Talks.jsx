@@ -6,7 +6,7 @@ import "../App.scss";
 const Talks = () => {
   return (
     <section>
-      <div class="landing" id="speaking">
+      <div class="landingTalks" id="speaking">
         <div class="flex talksButtonsTopPadding">
           <a
             href="/contact"
@@ -30,10 +30,17 @@ const Talks = () => {
         </div>
 
         <TalkCards />
-
       </div>
       <div className="blankSpace">
-        <div className="footerBg"></div>
+        <div className="footerBg">
+          <a
+            href="/contact"
+            class="btn buttonStyle talksButtons"
+            id="footerBook"
+          >
+            Book Me
+          </a>
+        </div>
       </div>
     </section>
   );

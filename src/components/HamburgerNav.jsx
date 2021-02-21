@@ -28,7 +28,7 @@ const HamburgerNav = () => {
               >
                 ×
               </div>
-              <ul className="navbar-ss">
+              <ul className="headerTop__navbar-ss">
                 <li className="nav-item-ss">
                   <a className="nav-link-ss" href="/">
                     Home
