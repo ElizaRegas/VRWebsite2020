@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import "../App.scss";
 
 const Dropdown = ({ setIsDropdownOpen }) => {
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 851);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1201);
 
   // Event listener for dropdown items in the hamburger nav
   useEffect(() => {
     window.addEventListener(
       "resize",
       () => {
-        const smallScreen = window.innerWidth < 851;
+        const smallScreen = window.innerWidth < 1201;
         if (smallScreen !== isSmallScreen) setIsSmallScreen(smallScreen);
       },
       false
@@ -19,8 +19,8 @@ const Dropdown = ({ setIsDropdownOpen }) => {
   return (
     <div>
       <div
-        id="dropdownStyling"
-        className="dropdown-menu"
+        // id="dropdownStyling"
+        className="dropdown-menu headerTop__nav-container--dropdownStyling"
         aria-labelledby="navbarDropdown"
       >
         {/* <div>
@@ -33,9 +33,9 @@ const Dropdown = ({ setIsDropdownOpen }) => {
             Portfolio
           </a>
         </div> */}
-        <div>
+        <div className="headerTop__nav-container--ddItemPadding">
           <a
-            id={`${isSmallScreen ? "dropdownItemSS" : "dropdown-item"}`}
+            className={`${isSmallScreen ? "headerTop__nav-container--dropdownItemSS" : "headerTop__nav-container--dropdown-item"}`}
             href="https://www.codeprep.io/podcast/"
             target="_blank"
             rel="noopener noreferrer"
@@ -46,7 +46,7 @@ const Dropdown = ({ setIsDropdownOpen }) => {
         </div>
         <div>
           <a
-            id={`${isSmallScreen ? "dropdownItemSS" : "dropdown-item"}`}
+            className={`${isSmallScreen ? "headerTop__nav-container--dropdownItemSS" : "headerTop__nav-container--dropdown-item"}`}
             href="https://medium.com/@valarieregas"
             target="_blank"
             rel="noopener noreferrer"

@@ -254,6 +254,7 @@ body {
   // z-index: -1;
 }
 
+// Buttons -----------------------------------------------------------------------
 .btn {
   &,
   &:link,
@@ -297,6 +298,7 @@ body {
   }
 }
 
+// Top header ----------------------------------------------------------------------
 .headerTop {
   padding: 2% 10%;
 
@@ -307,7 +309,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
-  
+
     @include respond(1068) {
       // padding: 0.5rem 0.25rem;
     }
@@ -317,12 +319,12 @@ body {
     margin-top: 2%;
     margin-bottom: -2%;
     @include fadeDown;
-  
+
     @include respond(600) {
       // width: 60%;
     }
   }
-  
+
   &__logo h1 a {
     font-family: "Homemade Apple";
     text-decoration: none;
@@ -330,11 +332,11 @@ body {
     color: white;
     // position: relative;
     // top: 0;
-  
+
     @include respond(1000) {
       // top: 2vw;
     }
-  
+
     @include respond(600) {
       // font-size: 6vw;
       // top: 3.5vw;
@@ -345,9 +347,9 @@ body {
   &__nav-container {
     // width: 60%;
     cursor: pointer;
-  
+
     @include fadeDown;
-  
+
     @include respond(1200) {
       display: none;
     }
@@ -361,20 +363,109 @@ body {
       text-decoration: none;
       color: white;
       font-size: 1.2rem;
-    
+
       @include respond(1400min) {
         // font-size: 1.3rem;
       }
-    
+
       @include respond(2000min) {
         // font-size: 1.8rem;
       }
     }
-    
+
     &--nav-link:hover {
       color: $color-grey-dark-1;
     }
+
+    &--dropdownStyling {
+      background-color: transparent;
+      margin-top: 0.25rem;
+      padding-left: 1rem;
+    }
+
+    &--dropdown-item {
+      color: white !important;
+      font-size: 1.1rem;
+      padding-left: 2rem;
+
+      @include respond(420) {
+        font-size: 0.7rem;
+      }
+
+      @include respond(2000min) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--dropdownItemSS {
+      color: white !important;
+      font-size: 1.1rem;
+    }
+
+    &--dropdown-item:hover,
+    --dropdownItemSS:hover {
+      color: grey !important;
+      background-color: transparent !important;
+      text-decoration: none;
+    }
+
+    // &--dropdownItemSS:hover {
+    //   color: gray !important;
+    //   background-color: transparent !important;
+    //   text-decoration: none;
+    // }
+
+    &--ddItemPadding {
+      padding-top: 0.5rem;
+    }
   }
+}
+
+// Hambuger Nav --------------------------------------------------------------------
+.hamburgerNav {
+
+  &__sidebar {
+    height: 100vh;
+    width: 25%;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 75%;
+    background-color: $color-red;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  
+    @include fadeLeft;
+  
+    @include respond(800) {
+      width: 30%;
+      left: 70%;
+    }
+  
+    @include respond(500) {
+      width: 40%;
+      left: 60%;
+    }
+  
+    @include respond(420) {
+      width: 45%;
+      left: 55%;
+    }
+  }
+
+  &__closeButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #dce5d8;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 2%;
+    right: 10%;
+    z-index: 10;
+  }
+  
 }
 
 .landingPage {
@@ -390,7 +481,7 @@ body {
 
     @include respond(900) {
       background-image: url(images/vrlanding-med-mobile.jpg);
-      
+
       // position: relative;
       // top: 0;
     }
@@ -405,7 +496,7 @@ body {
     font-size: 1.5rem;
     position: relative;
     top: 5rem;
-    left: 1rem;
+    left: 0rem;
     line-height: 3rem;
     padding: 2% 10%;
     text-shadow: 1px 1px 1px black;
@@ -937,18 +1028,6 @@ ul.row {
   clear: both;
 }
 
-.closeButton {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #dce5d8;
-  font-size: 2.5rem;
-  position: absolute;
-  top: 2%;
-  right: 10%;
-  z-index: 10;
-}
-
 .contactBg {
   background-image: url(./images/valContact.jpg);
   background-size: cover;
@@ -1289,8 +1368,6 @@ ul.row {
 //   }
 // }
 
-
-
 // .mediaDiv {
 //   cursor: pointer;
 // }
@@ -1462,36 +1539,6 @@ ul.row {
   }
 }
 
-.sidebar {
-  height: 100vh;
-  width: 25%;
-  position: fixed;
-  z-index: 200;
-  top: 0;
-  left: 75%;
-  background-color: $color-red;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-
-  @include fadeLeft;
-
-  @include respond(800) {
-    width: 30%;
-    left: 70%;
-  }
-
-  @include respond(500) {
-    width: 40%;
-    left: 60%;
-  }
-
-  @include respond(420) {
-    width: 45%;
-    left: 55%;
-  }
-}
-
 .socialImg {
   width: 1.6rem;
   height: auto;
@@ -1622,38 +1669,6 @@ ul.row {
 
 #contactLogo {
   position: relative;
-}
-
-#dropdown-item,
-#dropdownItemSS {
-  color: white !important;
-  font-size: 1rem;
-
-  @include respond(420) {
-    font-size: 0.7rem;
-  }
-
-  @include respond(2000min) {
-    font-size: 1.5rem;
-  }
-}
-
-#dropdown-item:hover {
-  color: grey !important;
-  background-color: transparent !important;
-  text-decoration: none;
-}
-
-#dropdownItemSS:hover {
-  color: gray !important;
-  background-color: transparent !important;
-  text-decoration: none;
-}
-
-#dropdownStyling {
-  background-color: transparent;
-  margin-top: 0.25rem;
-  padding-left: 1rem;
 }
 
 #footerBook {

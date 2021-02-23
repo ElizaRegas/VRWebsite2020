@@ -12,8 +12,8 @@ const HamburgerNav = () => {
 
   return (
     <Router>
-      <div id="mySidebar">
-        <div className="hamburgerNav" id="mySmallScreenNav">
+      <div>
+        <div className="hamburgerNav">
           {!sidebarIsOpen && (
             <i
               className="fa fa-2x fa-bars"
@@ -21,9 +21,9 @@ const HamburgerNav = () => {
             ></i>
           )}
           {sidebarIsOpen && (
-            <div className="sidebar">
+            <div className="hamburgerNav__sidebar">
               <div
-                className="closeButton"
+                className="hamburgerNav__closeButton"
                 onClick={() => setSidebarIsOpen(false)}
               >
                 ×
