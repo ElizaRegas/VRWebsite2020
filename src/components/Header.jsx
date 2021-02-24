@@ -20,7 +20,7 @@ const Header = () => {
             <HamburgerNav />
           </div>
           <div className="headerTop__nav-container">
-            <ul className="flex">
+            <ul>
               <li className="headerTop__nav-container--nav-item">
                 <a className="headerTop__nav-container--nav-link" href="/">
                   Home
@@ -56,7 +56,7 @@ const Header = () => {
                 )}
               </li>
               <li className="headerTop__nav-container--nav-item">
-                <a className="headerTop__nav-container--nav-link" href="/contact">
+                <a className={`${isDropdownOpen ? "headerTop__nav-container--nav-link-open" : "headerTop__nav-container--nav-link"}`} href="/contact">
                   Contact
                 </a>
               </li>

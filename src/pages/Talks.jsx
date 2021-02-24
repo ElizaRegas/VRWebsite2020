@@ -6,23 +6,21 @@ import "../App.scss";
 const Talks = () => {
   return (
     <section>
-      <div class="landingTalks" id="speaking">
-        <div class="flex talksButtonsTopPadding">
+      <div class="talks" id="speaking">
+        <div class="flex">
           <a
             href="/contact"
-            class="btn buttonStyle talksButtons"
-            id="talksBook"
+            class="btn buttonStyle talks__buttons talks__book"
+            // id="talksBook"
           >
             Book Me
           </a>
-          <h3 class="text-center" id="talksHeading">
-            Tech Talks
-          </h3>
+          <h2 class="text-center talks__heading">Tech Talks</h2>
           <a
             href="https://www.papercall.io/speakers/valarieregas"
             target="_blank"
-            class="btn buttonStyle talksButtons"
-            id="talksBrowse"
+            class="btn buttonStyle talks__buttons talks__browse"
+            // id="talksBrowse"
             rel="noopener noreferrer"
           >
             Browse
@@ -31,16 +29,10 @@ const Talks = () => {
 
         <TalkCards />
       </div>
-      <div className="blankSpace">
-        <div className="footerBg">
-          <a
-            href="/contact"
-            class="btn buttonStyle talksButtons"
-            id="footerBook"
-          >
-            Book Me
-          </a>
-        </div>
+      <div className="landingPage__landingBg footerBg">
+        <a href="/contact" class="btn buttonStyle talksButtons" id="footerBook">
+          Book Me
+        </a>
       </div>
     </section>
   );

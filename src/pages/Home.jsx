@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
-// import About from "../pages/About";
-// import Talks from "../pages/Talks";
+import About from "../pages/About";
+import Talks from "../pages/Talks";
 // import Footer from "../components/Footer";
 import "../App.scss";
 
@@ -33,11 +33,11 @@ const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
             </div>
           </div>
         </section>
-        {/* <div>
+        <div>
           <About />
           <Talks />
-          <Footer />
-        </div> */}
+          {/* <Footer /> */}
+        </div>
       </div>
   );
 };

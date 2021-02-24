@@ -50,7 +50,7 @@ const HamburgerNav = () => {
                 </li>
                 <li className="hamburgerNav__nav-item-ss dropdown">
                   <div
-                    className="hamburgerNav__nav-link-ss dropdown-toggle mediaDiv"
+                    className="hamburgerNav__nav-link-ss hamburgerNav__dropdown-toggle mediaDiv"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"
