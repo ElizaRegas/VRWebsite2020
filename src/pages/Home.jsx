@@ -32,13 +32,13 @@ const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
               </a>
             </div>
           </div>
-          <div>
-            <About />
-            <Talks />
-            <Contact />
-          </div>
         </div>
       </section>
+      <div>
+        <About />
+        <Talks />
+        <Contact />
+      </div>
       {/* <Footer /> */}
     </div>
   );

@@ -1137,9 +1137,9 @@ body {
   color: white;
   position: relative;
   left: 0;
-  bottom: -1rem;
+  bottom: 0;
   width: 100%;
-  padding: 1% 10%;
+  padding: 1% 10% 0 10%;
 
   // @include respond(1200) {
   //   bottom: -22rem;
