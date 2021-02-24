@@ -2,11 +2,10 @@ import React from "react";
 import Header from "../components/Header";
 import About from "../pages/About";
 import Talks from "../pages/Talks";
-// import Footer from "../components/Footer";
 import Contact from "./Contact";
 import "../App.scss";
 
-const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
+const Home = () => {
   return (
     <div>
       <section className="landingPage">
@@ -39,7 +38,6 @@ const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
         <Talks />
         <Contact />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };
