@@ -78,19 +78,19 @@ const Footer = () => {
                 ></img>
               </a>
             </li>
+            <li>
+              <a href="/">
+                <img
+                  src={upArrow}
+                  className="upArrow"
+                  width="28em"
+                  height="28em"
+                  alt="up arrow"
+                ></img>
+              </a>
+            </li>
           </ul>
         </div>
-      </div>
-      <div>
-        <a href="/">
-          <img
-            src={upArrow}
-            className="upArrow"
-            width="28em"
-            height="28em"
-            alt="up arrow"
-          ></img>
-        </a>
       </div>
       {/* </div> */}
     </footer>

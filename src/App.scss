@@ -1197,7 +1197,7 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 0% 10% 0 10%;
+  padding: 0% 3% 0 10%;
   height: 3.4vw;
   z-index: 100;
 
@@ -1266,13 +1266,11 @@ body {
   }
 
   .upArrow {
-    position: relative;
-    top: -3.7vw;
-    float: right;
-    right: -6vw;
-    cursor: pointer;
-
-    @include fadeUp;
+    margin-left: 5vw;
+    // position: relative;
+    // top: -3vw;
+    // left: 81vw;
+    // cursor: pointer;
   }
 }
 //-------------------------------------------------------------------------------
