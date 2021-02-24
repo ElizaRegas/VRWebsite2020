@@ -3,7 +3,7 @@ import React from "react";
 const TalkCards = () => {
   return (
     <div>
-      <section class="section-tours" id="section-tours">
+      <section class="talkCards">
 
         <div class="row">
           <div class="col-1-of-4">

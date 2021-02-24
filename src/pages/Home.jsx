@@ -2,16 +2,16 @@ import React from "react";
 import Header from "../components/Header";
 import About from "../pages/About";
 import Talks from "../pages/Talks";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import "../App.scss";
 
 const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
   return (
-      <div id="homeBackgroundColor">
-        <section>
-          <div className="landingBg homeCenter">
+      <div>
+        <section className="landingPage">
+          <div className="landingPage__landingBg">
             <Header />
-            <div className="landingCenterText">
+            <div className="landingPage__landingText">
               DevOps Engineer.
               <br />
               Tech Evangelist.
@@ -21,10 +21,10 @@ const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
               Queen of the YAMLs.
               <br />
               Total nerd.
-              <div className="bookMeFade">
+              <div className="landingPage__bookButton">
                 <a
                   href="/contact"
-                  className="btn buttonStyle talksButtons"
+                  className="btn buttonStyle landingPage__bookButton"
                   id="bookMeButton"
                 >
                   Book Me
@@ -36,7 +36,7 @@ const Home = ({ sidebarIsOpen, setSidebarIsOpen }) => {
         <div>
           <About />
           <Talks />
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
   );

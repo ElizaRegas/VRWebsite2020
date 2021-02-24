@@ -12,8 +12,8 @@ const HamburgerNav = () => {
 
   return (
     <Router>
-      <div id="mySidebar">
-        <div className="hamburgerNav" id="mySmallScreenNav">
+      <div>
+        <div className="hamburgerNav">
           {!sidebarIsOpen && (
             <i
               className="fa fa-2x fa-bars"
@@ -21,36 +21,36 @@ const HamburgerNav = () => {
             ></i>
           )}
           {sidebarIsOpen && (
-            <div className="sidebar">
+            <div className="hamburgerNav__sidebar">
               <div
-                className="closeButton"
+                className="hamburgerNav__closeButton"
                 onClick={() => setSidebarIsOpen(false)}
               >
                 ×
               </div>
-              <ul className="navbar-ss">
-                <li className="nav-item-ss">
-                  <a className="nav-link-ss" href="/">
+              <ul className="hamburgerNav__navbar-ss">
+                <li className="hamburgerNav__nav-item-ss">
+                  <a className="hamburgerNav__nav-link-ss" href="/">
                     Home
                   </a>
                 </li>
-                <li className="nav-item-ss">
+                <li className="hamburgerNav__nav-item-ss">
                   <a
-                    className="nav-link-ss"
+                    className="hamburgerNav__nav-link-ss"
                     href="/about"
                     onClick={() => setSidebarIsOpen(false)}
                   >
                     About
                   </a>
                 </li>
-                <li className="nav-item-ss">
-                  <a className="nav-link-ss" href="/portfolio">
+                <li className="hamburgerNav__nav-item-ss">
+                  <a className="hamburgerNav__nav-link-ss" href="/portfolio">
                     Portfolio
                   </a>
                 </li>
-                <li className="nav-item-ss dropdown">
+                <li className="hamburgerNav__nav-item-ss dropdown">
                   <div
-                    className="nav-link-ss dropdown-toggle mediaDiv"
+                    className="hamburgerNav__nav-link-ss hamburgerNav__dropdown-toggle mediaDiv"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -68,15 +68,15 @@ const HamburgerNav = () => {
                   )}
                 </li>
                 {isSSDropdownOpen && (
-                  <li className="nav-item-ss">
-                    <a className="contactDropdownOpen" href="/contact">
+                  <li className="hamburgerNav__nav-item-ss">
+                    <a className="hamburgerNav__contactDropdownOpen" href="/contact">
                       Contact
                     </a>
                   </li>
                 )}
                 {!isSSDropdownOpen && (
-                  <li className="nav-item-ss">
-                    <a href="/contact" className="nav-link-ss">
+                  <li className="hamburgerNav__nav-item-ss">
+                    <a href="/contact" className="hamburgerNav__nav-link-ss">
                       Contact
                     </a>
                   </li>
@@ -84,9 +84,9 @@ const HamburgerNav = () => {
               </ul>
 
               {/* Social media icons */}
-              <div className="icons-ss">
-                <ul className="flex iconFloat-ss">
-                  <li className="faIcons-ss">
+              <div className="hamburgerNav__icons-ss">
+                <ul className="flex">
+                  <li className="hamburgerNav__faIcons-ss">
                     <a
                       href="https://github.com/valarier"
                       target="_blank"
@@ -101,7 +101,7 @@ const HamburgerNav = () => {
                       ></img>
                     </a>
                   </li>
-                  <li className="faIcons-ss">
+                  <li className="hamburgerNav__faIcons-ss">
                     <a
                       href="https://www.papercall.io/speakers/valarieregas"
                       target="_blank"
@@ -116,7 +116,7 @@ const HamburgerNav = () => {
                       ></img>
                     </a>
                   </li>
-                  <li className="faIcons-ss">
+                  <li className="hamburgerNav__faIcons-ss">
                     <a
                       href="https://twitter.com/ValarieRegas"
                       target="_blank"
