@@ -1,27 +1,27 @@
 import React from "react";
 import TalkCards from "../components/TalkCards";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 // import mother from "../images/ListenToYourMother.jpg";
 import "../App.scss";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 
 const Talks = () => {
   return (
     <section>
-      <div class="talks" id="speaking">
-        <div class="flex">
+      <div className="talks" id="speaking">
+        <div className="flex talks__buttonsFlex">
           <a
             href="/#contact"
-            class="btn buttonStyle talks__buttons talks__book"
+            className="btn buttonStyle talks__buttons talks__book"
             // id="talksBook"
           >
             Book Me
           </a>
-          <h2 class="text-center talks__heading">Tech Talks</h2>
+          <h2 className="text-center talks__heading">Tech Talks</h2>
           <a
             href="https://www.papercall.io/speakers/valarieregas"
             target="_blank"
-            class="btn buttonStyle talks__buttons talks__browse"
+            className="btn buttonStyle talks__buttons talks__browse"
             // id="talksBrowse"
             rel="noopener noreferrer"
           >

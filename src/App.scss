@@ -277,11 +277,23 @@ a:hover {
   text-decoration: none;
 }
 
+html,
 body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   background-color: $color-red;
   font-family: source code pro;
   min-width: 320px !important;
 }
+
+// body {
+//   background-color: $color-red;
+//   font-family: source code pro;
+//   min-width: 320px !important;
+// }
 
 // Buttons -----------------------------------------------------------------------
 .btn {
@@ -333,11 +345,16 @@ body {
 
   &__container {
     position: relative;
+    top: 2vw;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
+
+    @include respond(1800min) {
+      padding: 4rem 1rem;
+    }
   }
 
   &__logo {
@@ -348,6 +365,10 @@ body {
 
     @include respond(1200) {
       top: 2%;
+    }
+
+    @include respond(1800min) {
+      top: -7vw;
     }
   }
 
@@ -367,14 +388,20 @@ body {
       left: -6%;
     }
 
-    @include respond(500) {
-      font-size: 2rem;
+    // @include respond(500) {
+    //   font-size: 2rem;
+    // }
+
+    @include respond(1800min) {
+      font-size: 4rem;
     }
   }
 
   &__nav-container {
     cursor: pointer;
     z-index: 10;
+    position: relative;
+    top: 1vw;
 
     @include fadeDown;
 
@@ -385,12 +412,20 @@ body {
     &--nav-item {
       font-family: source code pro;
       padding-bottom: 3rem;
+
+      @include respond(1800min) {
+        padding-bottom: 4rem;
+      }
     }
 
     &--nav-link {
       color: white;
       font-size: 1.2rem;
       float: right;
+
+      @include respond(1800min) {
+        font-size: 2rem;
+      }
     }
 
     &--nav-link:hover {
@@ -584,38 +619,40 @@ body {
   &__landingText {
     font-family: source code pro;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.6vw;
     position: relative;
-    top: -11.5rem;
+    top: -12vw;
     left: 0rem;
-    line-height: 3rem;
+    line-height: 3.5vw;
     padding: 2% 10%;
     text-shadow: 1px 1px 1px black;
 
     @include fadeRight;
 
-    @include respond(1200) {
-      font-size: 1.4rem;
-      top: 2rem;
-    }
+    // @include respond(1200) {
+    //   font-size: 1.4rem;
+    //   top: 2rem;
+    // }
 
-    @include respond(900) {
-      font-size: 1.3rem;
-      top: 3rem;
-    }
-    @include respond(750) {
-      font-size: 1.2rem;
-      top: 10rem;
-    }
-    @include respond(600) {
-      // font-size: 1.5rem;
-      line-height: 2rem;
-    }
-    @include respond(420) {
-      font-size: 1.1rem;
-    }
+    // @include respond(900) {
+    //   font-size: 1.3rem;
+    //   top: 3rem;
+    // }
+    // @include respond(750) {
+    //   font-size: 1.2rem;
+    //   top: 10rem;
+    // }
+    // @include respond(600) {
+    //   // font-size: 1.5rem;
+    //   line-height: 2rem;
+    // }
+    // @include respond(420) {
+    //   font-size: 1.1rem;
+    // }
     @include respond(1800min) {
-      font-size: 1.6rem;
+      font-size: 1.7vw;
+      line-height: 3.5vw;
+      top: -12vw;
     }
   }
 
@@ -624,6 +661,10 @@ body {
     text-shadow: none;
 
     @include fadeUp;
+
+    @include respond(1800min) {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -679,60 +720,68 @@ body {
   &__headers {
     font-weight: 600;
     padding: 0.5% 0%;
-    font-size: 1.1rem;
+    font-size: 1.5vw;
 
-    @include respond(1300) {
-      font-size: 1rem;
-    }
+    // @include respond(1300) {
+    //   font-size: 1rem;
+    // }
 
-    @include respond(1068) {
-      font-size: 0.8rem;
-    }
+    // @include respond(1068) {
+    //   font-size: 0.8rem;
+    // }
 
-    @include respond(953) {
-      font-size: 0.75rem;
-    }
+    // @include respond(953) {
+    //   font-size: 0.75rem;
+    // }
 
-    @include respond(900) {
-      font-size: 1.2rem;
-    }
+    // @include respond(900) {
+    //   font-size: 1.2rem;
+    // }
 
-    @include respond(600) {
-      font-size: 1rem;
-    }
+    // @include respond(600) {
+    //   font-size: 1rem;
+    // }
+
+    // @include respond(1800min) {
+    //   font-size: 1.5vw;
+    // }
   }
 
   &__text {
-    font-size: 0.83rem;
+    font-size: 1vw;
 
-    @include respond(1300) {
-      font-size: 0.8rem;
-    }
+    // @include respond(1300) {
+    //   font-size: 0.8rem;
+    // }
 
-    @include respond(1251) {
-      // font-size: 0.75rem;
-      line-height: 1.2;
-    }
+    // @include respond(1251) {
+    //   // font-size: 0.75rem;
+    //   line-height: 1.2;
+    // }
 
-    @include respond(1137) {
-      font-size: 0.75rem;
-    }
+    // @include respond(1137) {
+    //   font-size: 0.75rem;
+    // }
 
-    @include respond(1068) {
-      font-size: 0.7rem;
-    }
+    // @include respond(1068) {
+    //   font-size: 0.7rem;
+    // }
 
-    @include respond(953) {
-      font-size: 0.65rem;
-    }
+    // @include respond(953) {
+    //   font-size: 0.65rem;
+    // }
 
-    @include respond(900) {
-      font-size: 1rem;
-    }
+    // @include respond(900) {
+    //   font-size: 1rem;
+    // }
 
-    @include respond(600) {
-      font-size: 0.8rem;
-    }
+    // @include respond(600) {
+    //   font-size: 0.8rem;
+    // }
+
+    // @include respond(1800min) {
+    //   font-size: 1vw;
+    // }
   }
 }
 
@@ -742,6 +791,10 @@ body {
   padding-top: 2rem;
   padding-bottom: 5rem;
   margin-bottom: 1rem;
+
+  &__buttonsFlex {
+
+  }
 
   &__buttons {
     margin: 0 3rem;
@@ -1005,6 +1058,7 @@ body {
       height: 70vh;
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center;
     }
 
     // @include respond(600) {
@@ -1015,9 +1069,13 @@ body {
     // }
   }
 
+  // &__contactDiv {
+  //   position: relative;
+  //   top: 1vw;
+  // }
   .contactMe {
     font-size: 3rem;
-    font-family: 'Homemade Apple';
+    font-family: "Homemade Apple";
     position: relative;
     left: 55vw;
     color: white;
@@ -1589,6 +1647,10 @@ ul.row {
     padding: 0 3rem;
   }
 
+  @include respond(600) {
+    padding: 0;
+  }
+
   @include clearfix;
 
   [class^="col-"] {
@@ -1610,6 +1672,7 @@ ul.row {
 
     @include respond(600) {
       width: 100% !important;
+      padding: 0;
     }
   }
 
@@ -1643,6 +1706,13 @@ ul.row {
     );
   }
 }
+
+// div.row {
+//   @include respond(600) {
+//     width: 100% !important;
+//     padding: 0 !important;
+//   }
+// }
 
 .row2 {
   margin: 5vw 0vw 0vw 0vw;

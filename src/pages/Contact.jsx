@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div className="contact">
       <div id="contact" className="contactBg">
-        <div>
+        <div className="contact__textDiv">
           <h2 className="contactMe">Contact me!</h2>
           {/* <Header /> */}
           <Emailjs />
