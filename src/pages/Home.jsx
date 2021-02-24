@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import About from "../pages/About";
 import Talks from "../pages/Talks";
 import Contact from "./Contact";
+import Footer from "../components/Footer";
 import "../App.scss";
 
 const Home = () => {
@@ -38,6 +39,7 @@ const Home = () => {
         <Talks />
         <Contact />
       </div>
+      <Footer />
     </div>
   );
 };

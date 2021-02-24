@@ -1,7 +1,7 @@
 import React from "react";
 // import Header from "../components/Header";
 import Emailjs from "../components/Emailjs";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import "../App.scss";
 
 const Contact = () => {
@@ -14,7 +14,7 @@ const Contact = () => {
           <Emailjs />
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

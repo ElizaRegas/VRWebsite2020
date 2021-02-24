@@ -1191,13 +1191,15 @@ body {
 
 // Footer -------------------------------------------------------------------------
 .footer {
-  background-color: transparent;
+  background-color: #9f0712;
   color: white;
-  position: relative;
+  position: sticky;
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 1% 10% 0 10%;
+  padding: 0% 10% 0 10%;
+  height: 3.4vw;
+  z-index: 100;
 
   // @include respond(1200) {
   //   bottom: -22rem;
@@ -1261,6 +1263,16 @@ body {
 
   .iconFloat {
     float: right;
+  }
+
+  .upArrow {
+    position: relative;
+    top: -3.7vw;
+    float: right;
+    right: -6vw;
+    cursor: pointer;
+
+    @include fadeUp;
   }
 }
 //-------------------------------------------------------------------------------
@@ -1775,12 +1787,6 @@ ul.row {
   @include respond(900) {
     margin-bottom: 5rem !important;
   }
-}
-
-.upArrow {
-  width: 4%;
-  height: auto;
-  float: right;
 }
 
 .upArrowAbout {
