@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer">
-        <div className="footerFlex">
+        <div className="footer__flex">
           <div className="copyrightText">
             <p className="copyrightTextFontSize">© 2020 Valarie Regas</p>
           </div>

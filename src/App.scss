@@ -128,6 +128,11 @@
       @content;
     }
   }
+  @if $breakpoint == 650 {
+    @media only screen and (max-width: 650px) {
+      @content;
+    }
+  }
   @if $breakpoint == 600 {
     @media only screen and (max-width: 600px) {
       @content;
@@ -350,6 +355,11 @@ body {
       font-size: 2.5rem;
       position: relative;
       top: 1rem;
+    }
+
+    @include respond(600) {
+      font-size: 2rem;
+      left: -6%;
     }
 
     @include respond(500) {
@@ -933,17 +943,124 @@ body {
   //   height: 60vw;
   // }
 
+  // @include respond(900) {
+  //   display: none;
+  // }
+
+  #footerBook {
+    position: relative;
+    top: -12rem;
+    left: 11%;
+
+    @include respond(1200) {
+      top: 1rem;
+    }
+    // @include respond(900) {
+    //   top: 10rem;
+    //   left: 10rem;
+    // }
+
+    // @include respond(800) {
+    //   top: 10rem;
+    //   left: 8rem;
+    // }
+
+    // @include respond(700) {
+    //   top: 6rem;
+    //   left: 6rem;
+    // }
+
+    // @include respond(600) {
+    //   top: 3rem;
+    //   left: 5rem;
+    // }
+
+    // @include respond(500) {
+    //   left: 3.5rem;
+    // }
+  }
+}
+
+.footer {
+  background-color: transparent;
+  color: white;
+  position: relative;
+  left: 0;
+  bottom: -8rem;
+  width: 100%;
+  padding: 1% 10%;
+
+  @include respond(1200) {
+    bottom: -22rem;
+  }
+
   @include respond(900) {
-    display: none;
+    bottom: -24rem;
+  }
+
+  @include respond(900) {
+    bottom: -25rem;
+  }
+
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    @include fadeUp;
+  }
+
+  .copyrightText {
+    width: 80%;
+    float: left;
+    vertical-align: middle;
+  }
+  
+  .copyrightTextFontSize {
+    font-size: 1.2rem;
+  
+    @include respond(900) {
+      font-size: 1rem;
+    }
+  
+    // @include respond(500) {
+    //   font-size: 0.7rem;
+    // }
+  
+    @include respond(2000min) {
+      font-size: 1.6rem;
+    }
+  }
+
+  .icons {
+    width: 20%;
+    padding-right: 2%;
+  
+    // @include respond(1200) {
+    //   display: none;
+    // }
+  
+    @include respond(900) {
+      padding-right: 2%;
+    }
+  
+    @include respond(500) {
+      padding: 0;
+    }
+  }
+  
+  .iconFloat {
+    float: right;
   }
 }
 //-------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------
 
-footer {
-  height: 6vw;
-}
+// footer {
+//   height: 6vw;
+// }
 
 form {
   transition: all 4% ease-in-out;
@@ -1104,10 +1221,15 @@ ul.row {
 
 .contactBg {
   background-image: url(./images/valContact.jpg);
-  background-size: cover;
   background-attachment: initial;
-  min-height: 56vw;
-  max-width: 100vw;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100vw;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  // background-position-y: center;
 
   @include respond(900) {
     background-image: url(images/valContact-900.jpg);
@@ -1116,36 +1238,55 @@ ul.row {
     background-repeat: no-repeat;
   }
 
-  @include respond(600) {
-    background-image: url(images/valContact-ss.jpg);
-    height: 70vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  // @include respond(600) {
+  //   background-image: url(images/valContact-ss.jpg);
+  //   // min-height: 100vh;
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  // }
 }
 
 .contact-form {
   width: 35%;
   float: right;
   position: relative;
-  top: 8vw;
+  top: -2rem;
   color: white;
-  font-size: 1.3vw;
+  font-size: 1.2rem;
 
   @include fadeLeft;
 
+  @include respond(1200) {
+    top: 6rem;
+  }
+
   @include respond(900) {
-    margin: 84vw 50vw 16vw 50vw;
-    font-size: 2vw;
+    font-size: 1.5rem;
+    top: 38rem;
+    float: left;
+    padding-left: 11.5%;
+    padding-bottom: 5rem;
   }
 
-  @include respond(750) {
-    margin-top: 65vw;
-  }
+  // @include respond(800) {
+  //   top: -15rem;
+  // }
 
-  @include respond(600) {
-    margin-top: 60vh;
-  }
+  // @include respond(750) {
+  //   top: -12rem;
+  // }
+
+  // @include respond(750) {
+  //   top: -9rem;
+  // }
+
+  // @include respond(650) {
+  //   top: -6rem;
+  // }
+
+  // @include respond(600) {
+  //   top: -3rem;
+  // }
 }
 
 .contact-input {
@@ -1155,7 +1296,7 @@ ul.row {
   background: transparent;
 
   @include respond(900) {
-    width: 50vw;
+    width: 78vw;
   }
 }
 
@@ -1174,28 +1315,6 @@ ul.row {
   display: flex;
   justify-content: center;
   padding: 0 !important;
-}
-
-.copyrightText {
-  width: 80%;
-  float: left;
-  vertical-align: middle;
-}
-
-.copyrightTextFontSize {
-  font-size: 1.2rem;
-
-  @include respond(900) {
-    font-size: 1rem;
-  }
-
-  @include respond(500) {
-    font-size: 0.7rem;
-  }
-
-  @include respond(2000min) {
-    font-size: 1.6rem;
-  }
 }
 
 .dropdown-menu {
@@ -1251,25 +1370,6 @@ ul.row {
   float: right;
 }
 
-.footer {
-  background-color: transparent;
-  color: white;
-  position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 1% 10%;
-}
-
-.footerFlex {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-  @include fadeUp;
-}
-
 .footerMargin {
   padding-top: 1rem;
 }
@@ -1320,27 +1420,6 @@ ul.row {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
   }
-}
-
-.icons {
-  width: 20%;
-  padding-right: 2%;
-
-  @include respond(1200) {
-    display: none;
-  }
-
-  @include respond(900) {
-    padding-right: 2%;
-  }
-
-  @include respond(500) {
-    padding: 0;
-  }
-}
-
-.iconFloat {
-  float: right;
 }
 
 .iframe {
@@ -1613,12 +1692,6 @@ ul.row {
 
 #contactLogo {
   position: relative;
-}
-
-#footerBook {
-  position: relative;
-  top: 17rem;
-  left: 14rem;
 }
 
 #hamburger-nav {

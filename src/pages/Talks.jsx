@@ -1,7 +1,9 @@
 import React from "react";
 import TalkCards from "../components/TalkCards";
+import Footer from "../components/Footer";
 // import mother from "../images/ListenToYourMother.jpg";
 import "../App.scss";
+import Header from "../components/Header";
 
 const Talks = () => {
   return (
@@ -30,9 +32,11 @@ const Talks = () => {
         <TalkCards />
       </div>
       <div className="landingPage__landingBg footerBg">
+        <Header />
         <a href="/contact" class="btn buttonStyle talksButtons" id="footerBook">
           Book Me
         </a>
+        <Footer />
       </div>
     </section>
   );
