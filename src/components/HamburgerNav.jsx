@@ -69,14 +69,14 @@ const HamburgerNav = () => {
                 </li>
                 {isSSDropdownOpen && (
                   <li className="hamburgerNav__nav-item-ss">
-                    <a className="hamburgerNav__contactDropdownOpen" href="/contact">
+                    <a className="hamburgerNav__contactDropdownOpen" href="/#contact">
                       Contact
                     </a>
                   </li>
                 )}
                 {!isSSDropdownOpen && (
                   <li className="hamburgerNav__nav-item-ss">
-                    <a href="/contact" className="hamburgerNav__nav-link-ss">
+                    <a href="/#contact" className="hamburgerNav__nav-link-ss">
                       Contact
                     </a>
                   </li>

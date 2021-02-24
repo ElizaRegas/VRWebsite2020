@@ -188,6 +188,11 @@
       @content;
     }
   }
+  @if $breakpoint == 1100 {
+    @media only screen and (max-width: 1100px) {
+      @content;
+    }
+  }
   @if $breakpoint == 1137 {
     @media only screen and (max-width: 1137px) {
       @content;
@@ -397,7 +402,7 @@ body {
       color: white;
       font-size: 1.2rem;
       float: right;
-      padding-top: .6rem;
+      padding-top: 0.6rem;
     }
 
     &--nav-link-open:hover {
@@ -947,60 +952,206 @@ body {
   //   display: none;
   // }
 
-  #footerBook {
-    position: relative;
-    top: -12rem;
-    left: 11%;
+  // #footerBook {
+  //   position: relative;
+  //   top: -12rem;
+  //   left: 11%;
 
-    @include respond(1200) {
-      top: 1rem;
+  //   @include respond(1200) {
+  //     top: 1rem;
+  //   }
+  // @include respond(900) {
+  //   top: 10rem;
+  //   left: 10rem;
+  // }
+
+  // @include respond(800) {
+  //   top: 10rem;
+  //   left: 8rem;
+  // }
+
+  // @include respond(700) {
+  //   top: 6rem;
+  //   left: 6rem;
+  // }
+
+  // @include respond(600) {
+  //   top: 3rem;
+  //   left: 5rem;
+  // }
+
+  // @include respond(500) {
+  //   left: 3.5rem;
+  // }
+  // }
+}
+
+// Contact ----------------------------------------------------------------------
+.contact {
+  .contactBg {
+    background-image: url(./images/valContact.jpg);
+    background-attachment: initial;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100vw;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    // background-position-y: center;
+
+    @include respond(900) {
+      background-image: url(images/valContact-900.jpg);
+      height: 70vh;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
+
+    // @include respond(600) {
+    //   background-image: url(images/valContact-ss.jpg);
+    //   // min-height: 100vh;
+    //   background-size: cover;
+    //   background-repeat: no-repeat;
+    // }
+  }
+
+  .contactMe {
+    font-size: 3rem;
+    font-family: 'Homemade Apple';
+    position: relative;
+    left: 55vw;
+    color: white;
+    top: 8vw;
+
+    @include respond(1100) {
+      font-size: 2.5rem;
+      left: 61vw;
+    }
+
+    @include respond(900) {
+      left: 7vw;
+    }
+  }
+
+  .contact-form {
+    width: 35%;
+    float: right;
+    position: relative;
+    top: 15vw;
+    color: white;
+    font-size: 1.2rem;
+
+    @include fadeLeft;
+
+    @include respond(900) {
+      width: 50%;
+      float: none;
+      top: 35vw;
+      margin: auto;
+    }
+
+    // @include respond(1200) {
+    //   top: 6rem;
+    // }
+
     // @include respond(900) {
-    //   top: 10rem;
-    //   left: 10rem;
+    //   font-size: 1.5rem;
+    //   top: 38rem;
+    //   float: left;
+    //   padding-left: 11.5%;
+    //   padding-bottom: 5rem;
     // }
 
     // @include respond(800) {
-    //   top: 10rem;
-    //   left: 8rem;
+    //   top: -15rem;
     // }
 
-    // @include respond(700) {
-    //   top: 6rem;
-    //   left: 6rem;
+    // @include respond(750) {
+    //   top: -12rem;
+    // }
+
+    // @include respond(750) {
+    //   top: -9rem;
+    // }
+
+    // @include respond(650) {
+    //   top: -6rem;
     // }
 
     // @include respond(600) {
-    //   top: 3rem;
-    //   left: 5rem;
+    //   top: -3rem;
     // }
+  }
 
-    // @include respond(500) {
-    //   left: 3.5rem;
+  .contact-input {
+    width: 22vw;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+
+    @include respond(900) {
+      width: 100%;
+    }
+  }
+
+  .contact-input:focus {
+    outline: double white;
+    border-bottom: none;
+  }
+
+  .contact-title {
+    text-align: center;
+    color: white;
+    transition: all 4% ease-in-out;
+  }
+
+  #contactButton {
+    margin-top: 1vw;
+
+    // @include respond(900) {
+    //   background-color: white;
+    //   color: $color-red;
+    //   margin-top: 5vw;
     // }
+  }
+
+  #contactForm {
+    background: transparent;
+  }
+
+  #contactInfo {
+    position: relative;
+    top: 6vw;
+    color: white;
+    width: max-content;
+  }
+
+  #contactLogo {
+    position: relative;
   }
 }
 
+// Footer -------------------------------------------------------------------------
 .footer {
   background-color: transparent;
   color: white;
   position: relative;
   left: 0;
-  bottom: -8rem;
+  bottom: -1rem;
   width: 100%;
   padding: 1% 10%;
 
-  @include respond(1200) {
-    bottom: -22rem;
-  }
+  // @include respond(1200) {
+  //   bottom: -22rem;
+  // }
 
-  @include respond(900) {
-    bottom: -24rem;
-  }
+  // @include respond(900) {
+  //   bottom: -24rem;
+  // }
 
-  @include respond(900) {
-    bottom: -25rem;
-  }
+  // @include respond(900) {
+  //   bottom: -25rem;
+  // }
 
   &__flex {
     display: flex;
@@ -1016,18 +1167,18 @@ body {
     float: left;
     vertical-align: middle;
   }
-  
+
   .copyrightTextFontSize {
     font-size: 1.2rem;
-  
+
     @include respond(900) {
       font-size: 1rem;
     }
-  
+
     // @include respond(500) {
     //   font-size: 0.7rem;
     // }
-  
+
     @include respond(2000min) {
       font-size: 1.6rem;
     }
@@ -1036,20 +1187,20 @@ body {
   .icons {
     width: 20%;
     padding-right: 2%;
-  
+
     // @include respond(1200) {
     //   display: none;
     // }
-  
+
     @include respond(900) {
       padding-right: 2%;
     }
-  
+
     @include respond(500) {
       padding: 0;
     }
   }
-  
+
   .iconFloat {
     float: right;
   }
@@ -1061,6 +1212,11 @@ body {
 // footer {
 //   height: 6vw;
 // }
+
+.blankSpace {
+  height: 10vw;
+  background-color: transparent;
+}
 
 form {
   transition: all 4% ease-in-out;
@@ -1217,98 +1373,6 @@ ul.row {
 
 .clear {
   clear: both;
-}
-
-.contactBg {
-  background-image: url(./images/valContact.jpg);
-  background-attachment: initial;
-  background-attachment: fixed;
-  min-height: 100vh;
-  width: 100vw;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  // background-position-y: center;
-
-  @include respond(900) {
-    background-image: url(images/valContact-900.jpg);
-    height: 70vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  // @include respond(600) {
-  //   background-image: url(images/valContact-ss.jpg);
-  //   // min-height: 100vh;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-  // }
-}
-
-.contact-form {
-  width: 35%;
-  float: right;
-  position: relative;
-  top: -2rem;
-  color: white;
-  font-size: 1.2rem;
-
-  @include fadeLeft;
-
-  @include respond(1200) {
-    top: 6rem;
-  }
-
-  @include respond(900) {
-    font-size: 1.5rem;
-    top: 38rem;
-    float: left;
-    padding-left: 11.5%;
-    padding-bottom: 5rem;
-  }
-
-  // @include respond(800) {
-  //   top: -15rem;
-  // }
-
-  // @include respond(750) {
-  //   top: -12rem;
-  // }
-
-  // @include respond(750) {
-  //   top: -9rem;
-  // }
-
-  // @include respond(650) {
-  //   top: -6rem;
-  // }
-
-  // @include respond(600) {
-  //   top: -3rem;
-  // }
-}
-
-.contact-input {
-  width: 22vw;
-  border: none;
-  border-bottom: 2px solid white;
-  background: transparent;
-
-  @include respond(900) {
-    width: 78vw;
-  }
-}
-
-.contact-input:focus {
-  outline: double white;
-  border-bottom: none;
-}
-
-.contact-title {
-  text-align: center;
-  color: white;
-  transition: all 4% ease-in-out;
 }
 
 .container {
@@ -1667,31 +1731,6 @@ ul.row {
     padding-bottom: 10%;
     font-size: 0.85rem;
   }
-}
-
-#contactButton {
-  margin-top: 1vw;
-
-  @include respond(900) {
-    background-color: white;
-    color: $color-red;
-    margin-top: 5vw;
-  }
-}
-
-#contactForm {
-  background: transparent;
-}
-
-#contactInfo {
-  position: relative;
-  top: 6vw;
-  color: white;
-  width: max-content;
-}
-
-#contactLogo {
-  position: relative;
 }
 
 #hamburger-nav {

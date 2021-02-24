@@ -11,7 +11,7 @@ const Talks = () => {
       <div class="talks" id="speaking">
         <div class="flex">
           <a
-            href="/contact"
+            href="/#contact"
             class="btn buttonStyle talks__buttons talks__book"
             // id="talksBook"
           >
@@ -31,13 +31,14 @@ const Talks = () => {
 
         <TalkCards />
       </div>
-      <div className="landingPage__landingBg footerBg">
-        <Header />
-        <a href="/contact" class="btn buttonStyle talksButtons" id="footerBook">
+      {/* <div className="blankSpace"></div> */}
+      {/* <div className="landingPage__landingBg footerBg"> */}
+        {/* <Header /> */}
+        {/* <a href="/contact" class="btn buttonStyle talksButtons" id="footerBook">
           Book Me
-        </a>
-        <Footer />
-      </div>
+        </a> */}
+        {/* <Footer /> */}
+      {/* </div> */}
     </section>
   );
 };

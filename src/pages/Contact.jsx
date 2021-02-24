@@ -1,19 +1,20 @@
 import React from "react";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import Emailjs from "../components/Emailjs";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 import "../App.scss";
 
 const Contact = () => {
   return (
-    <div>
-      <div className="contactBg">
-        <div className="noReverse">
-          <Header />
+    <div className="contact">
+      <div id="contact" className="contactBg">
+        <div>
+          <h2 className="contactMe">Contact me!</h2>
+          {/* <Header /> */}
           <Emailjs />
         </div>
-      {/* <Footer /> */}
       </div>
+      <Footer />
     </div>
   );
 };

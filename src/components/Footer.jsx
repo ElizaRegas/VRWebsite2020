@@ -6,8 +6,8 @@ import "../App.scss";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="footer">
+    <footer className="footer">
+      {/* <div className="footer"> */}
         <div className="footer__flex">
           <div className="copyrightText">
             <p className="copyrightTextFontSize">© 2020 Valarie Regas</p>
@@ -64,7 +64,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </footer>
   );
 };

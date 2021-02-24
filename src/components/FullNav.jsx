@@ -48,7 +48,7 @@ const FullNav = ({ isDropdownOpen, setIsDropdownOpen }) => {
                 ? "headerTop__nav-container--nav-link-open"
                 : "headerTop__nav-container--nav-link"
             }`}
-            href="/contact"
+            href="/#contact"
           >
             Contact
           </a>
