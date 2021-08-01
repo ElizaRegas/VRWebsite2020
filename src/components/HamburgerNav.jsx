@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Dropdown from "./Dropdown";
-import github from "../images/github-white.png";
-import papercall from "../images/papercall-white.png";
-import twitter from "../images/twitter-white.png";
 import "../App.scss";
 
 const HamburgerNav = () => {

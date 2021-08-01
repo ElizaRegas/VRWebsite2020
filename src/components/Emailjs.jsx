@@ -36,7 +36,9 @@ export default function ContactUs() {
       <br />
       <textarea className="contact-input" name="message" />
       <br />
-      <input id="contactButton" className="btn buttonStyle" type="submit" value="Send" />
+      <span id="sendButtonContact" className="btn2">
+        <input id="contactButton" type="submit" value="Send" />
+      </span>
     </form>
   );
 }

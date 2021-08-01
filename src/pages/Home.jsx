@@ -22,16 +22,43 @@ const Home = () => {
             Queen of the YAMLs.
             <br />
             Total nerd.
-            <div className="landingPage__bookButton">
+            {/* <div className="landingPage__bookButton">
               <a
                 href="/#contact"
                 className="btn buttonStyle landingPage__bookButton"
-                id="bookMeButton"
+                // id="bookMeButton"
               >
                 Book Me
               </a>
+              <a
+                target="blank"
+                href="https://github.com/ValarieR/Speakers-Bio"
+                className="btn buttonStyle landingPage__bookButton"
+                // id="bookMeButton"
+              >
+                Browse My Talks
+              </a>
+            </div> */}
+            
+            <div className="containerDiv landingPage__bookButton">
+              <a
+                href="/#contact"
+                className="btn2"
+                // id="bookMeButton"
+              >
+                Book Me
+              </a>
+              <a
+                target="blank"
+                href="https://github.com/ValarieR/Speakers-Bio#readme"
+                className="btn2"
+                // id="bookMeButton"
+              >
+                Browse My Talks
+              </a>
             </div>
-          </div>
+
+          </div>        
         </div>
       </section>
       <div>

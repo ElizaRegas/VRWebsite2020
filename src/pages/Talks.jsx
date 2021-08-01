@@ -9,10 +9,10 @@ const Talks = () => {
   return (
     <section>
       <div className="talks" id="speaking">
-        <div className="flex talks__buttonsFlex">
+        {/* <div className="flex talks__buttonsFlex">
           <a
             href="/#contact"
-            className="btn buttonStyle talks__buttons talks__book"
+            className="  talks__book"
             // id="talksBook"
           >
             Book Me
@@ -22,6 +22,26 @@ const Talks = () => {
             href="https://www.papercall.io/speakers/valarieregas"
             target="_blank"
             className="btn buttonStyle talks__buttons talks__browse"
+            // id="talksBrowse"
+            rel="noopener noreferrer"
+          >
+            Browse
+          </a>
+        </div> */}
+
+        <div className="flex talks__buttonsFlex">
+          <a
+            href="/#contact"
+            className="btn2 talks__buttons"
+            // id="talksBook"
+          >
+            Book Me
+          </a>
+          <h2 className="text-center talks__heading">Tech Talks</h2>
+          <a
+            href="https://www.papercall.io/speakers/valarieregas"
+            target="_blank"
+            className="btn2 talks__buttons"
             // id="talksBrowse"
             rel="noopener noreferrer"
           >
