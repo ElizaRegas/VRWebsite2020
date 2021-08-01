@@ -349,7 +349,6 @@ body {
     top: 2vw;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
 
@@ -359,9 +358,7 @@ body {
   }
 
   &__logo {
-    position: relative;
-    top: -6rem;
-    margin-bottom: -2%;
+
     @include fadeDown;
 
     @include respond(1200) {
@@ -447,7 +444,7 @@ body {
 
     &--dropdownStyling {
       background-color: transparent;
-      margin-top: 0.25rem;
+      margin: 0.25rem;
       padding-left: 1rem;
     }
 

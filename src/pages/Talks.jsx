@@ -39,7 +39,7 @@ const Talks = () => {
           </a>
           <h2 className="text-center talks__heading">Tech Talks</h2>
           <a
-            href="https://www.papercall.io/speakers/valarieregas"
+            href="https://github.com/ValarieR/Speakers-Bio#readme"
             target="_blank"
             className="btn2 talks__buttons"
             // id="talksBrowse"

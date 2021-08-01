@@ -19,7 +19,6 @@ const Dropdown = ({ setIsDropdownOpen, setSidebarIsOpen }) => {
   return (
     <div className={`${isSmallScreen ? "dropdown-menu-ss" : "dropdown-menu"}`}>
       <div
-        // id="dropdownStyling"
         className="headerTop__nav-container--dropdownStyling"
         aria-labelledby="navbarDropdown"
       >
@@ -62,6 +61,21 @@ const Dropdown = ({ setIsDropdownOpen, setSidebarIsOpen }) => {
             onClick={() => setSidebarIsOpen(false)}
           >
             Blog
+          </a>
+        </div>
+        <div>
+          <a
+            className={`${
+              isSmallScreen
+                ? "headerTop__nav-container--dropdownItemSS"
+                : "headerTop__nav-container--dropdown-item"
+            }`}
+            href="https://www.womenwhocode.com/atlanta/about"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setSidebarIsOpen(false)}
+          >
+            Leadership
           </a>
         </div>
       </div>
